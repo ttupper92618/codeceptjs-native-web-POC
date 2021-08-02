@@ -1,9 +1,8 @@
 exports.config = {
-  tests: './*_test.js',
   output: './output',
   helpers: {
     Appium: {
-      app: '/Users/thomastupper/appium-codecept-POC/sample_apps/DevCorps.app',
+      app: '/Users/thomastupper/appium-codecept-POC/sample_apps/iOS.app',
       platform: 'iOS',
       desiredCapabilities: {
         deviceName: 'iPhone 11',
@@ -17,34 +16,42 @@ exports.config = {
   include: {
     I: './steps_file.js'
   },
-  bootstrap: null,
   mocha: {
     reporterOptions: {
-        "codeceptjs-cli-reporter": {
-          stdout: '-',
-          options: {
-            verbose: true,
-            steps: true,
-          }
-        },
-        mochawesome: {
-          stdout: './output/console.log',
-          options: {
-            reportDir: './output',
-            reportFilename: 'report'
-          }
-        },
-        "mocha-junit-reporter": {
-          stdout: './output/console.log',
-          options: {
-            mochaFile: './output/result.xml',
-            attachments: true //add screenshot for a failed test
-          }
+      'codeceptjs-cli-reporter': {
+        stdout: '-',
+        options: {
+          verbose: true,
+          steps: true
         }
+      },
+      mochawesome: {
+        stdout: './output/console.log',
+        options: {
+          reportDir: './output',
+          reportFilename: 'report'
+        }
+      },
+      'mocha-junit-reporter': {
+        stdout: './output/console.log',
+        options: {
+          mochaFile: './output/result.xml',
+          attachments: true
+        }
+      }
     }
   },
-  name: 'appium-codecept-POC',
+  bootstrap: null,
+  teardown: null,
+  hooks: [],
+  gherkin: {
+    features: './features/*.feature',
+    steps: ['./step_definitions/steps.js']
+  },
   plugins: {
+    screenshotOnFail: {
+      enabled: true
+    },
     allure: {
       enabled: true
     },
@@ -54,9 +61,8 @@ exports.config = {
     },
     tryTo: {
       enabled: true
-    },
-    screenshotOnFail: {
-      enabled: true
     }
-  }
+  },
+  tests: './*_test.js',
+  name: 'appium-codecept-POC'
 }
