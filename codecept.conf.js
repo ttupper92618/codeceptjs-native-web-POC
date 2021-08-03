@@ -1,15 +1,28 @@
+const path = require('path');
+
+const androidCaps = {
+  platformName: 'Android',
+  automationName: 'UiAutomator2',
+  deviceName: 'Android Emulator',
+  avd: 'Pixel_5_API_28',
+  app: path.resolve('./sample_apps/Zillow.apk')
+};
+
+const iosCaps = {
+  
+}
+
 exports.config = {
   output: './output',
   helpers: {
     Appium: {
-      app: '/Users/thomastupper/appium-codecept-POC/sample_apps/Zillow.apk',
       platform: 'Android',
       desiredCapabilities: {
         platformName: 'Android',
         automationName: 'UiAutomator2',
         deviceName: 'Android Emulator',
-        // app: path.resolve('../myapp.apk'),
-        avd: 'Pixel_5_API_28'
+        avd: 'Pixel_5_API_28',
+        app: path.resolve('./sample_apps/Zillow.apk')
       }
     },
     Mochawesome: {
