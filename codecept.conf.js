@@ -2,11 +2,12 @@ exports.config = {
   output: './output',
   helpers: {
     Appium: {
-      app: '/Users/thomastupper/appium-codecept-POC/sample_apps/iOS.app',
-      platform: 'iOS',
+      app: '/Users/thomastupper/appium-codecept-POC/sample_apps/Android.apk',
+      platform: 'Android',
       desiredCapabilities: {
-        deviceName: 'iPhone 11',
-        automationName: 'XCUITest'
+        deviceName: 'Pixel 5 API 28',
+        platformName: 'Android',
+        automationName: 'UiAutomator2'
       }
     },
     Mochawesome: {
@@ -64,5 +65,5 @@ exports.config = {
     }
   },
   tests: './*_test.js',
-  name: 'appium-codecept-POC'
+  name: 'appium-codecept-Android-POC'
 }
