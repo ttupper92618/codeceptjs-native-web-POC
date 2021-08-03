@@ -1,0 +1,479 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-03T22:18:17.797Z",
+    "end": "2021-08-03T22:22:45.946Z",
+    "duration": 268149,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "00942a0c-7808-43e1-9235-c2e0a4dd7b35",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "929a8a50-e346-4fe6-8e43-b5d55e7f4b55",
+          "title": "Viewing product details",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook: codeceptjs.beforeSuite in \"Viewing product details\"",
+              "fullTitle": "Viewing product details \"before all\" hook: codeceptjs.beforeSuite in \"Viewing product details\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.suiteSetup(suite)",
+              "err": {},
+              "uuid": "fb6c760e-cddb-43c7-8cd3-d5b02b828b60",
+              "parentUUID": "929a8a50-e346-4fe6-8e43-b5d55e7f4b55",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"before each\" hook: codeceptjs.before in \"Viewing product details\"",
+              "fullTitle": "Viewing product details \"before each\" hook: codeceptjs.before in \"Viewing product details\"",
+              "timedOut": false,
+              "duration": 10785,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.setup(suite)",
+              "err": {},
+              "uuid": "ac32e116-599b-4f3f-867a-e4f2bb77eba0",
+              "parentUUID": "929a8a50-e346-4fe6-8e43-b5d55e7f4b55",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook: codeceptjs.afterSuite in \"Viewing product details\"",
+              "fullTitle": "Viewing product details \"after all\" hook: codeceptjs.afterSuite in \"Viewing product details\"",
+              "timedOut": false,
+              "duration": 8,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.suiteTeardown(suite)",
+              "err": {},
+              "uuid": "159dfd1d-49b9-4b72-866d-0a2a620ca78e",
+              "parentUUID": "929a8a50-e346-4fe6-8e43-b5d55e7f4b55",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"after each\" hook: codeceptjs.after in \"Viewing product details\"",
+              "fullTitle": "Viewing product details \"after each\" hook: codeceptjs.after in \"Viewing product details\"",
+              "timedOut": false,
+              "duration": 30140,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.teardown(suite)",
+              "err": {},
+              "uuid": "a1998262-400f-4e64-be93-fff4abf58975",
+              "parentUUID": "929a8a50-e346-4fe6-8e43-b5d55e7f4b55",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Select a product",
+              "fullTitle": "Viewing product details Select a product",
+              "timedOut": false,
+              "duration": 9974,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "runSteps(child.steps)",
+              "err": {},
+              "uuid": "89df3c2d-2bda-48e2-97ef-c7db91a1a487",
+              "parentUUID": "929a8a50-e346-4fe6-8e43-b5d55e7f4b55",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "89df3c2d-2bda-48e2-97ef-c7db91a1a487"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9974,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        },
+        {
+          "uuid": "4033382a-f3db-4d00-945f-73b4bb61bdf4",
+          "title": "Loging in",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook: codeceptjs.beforeSuite in \"Loging in\"",
+              "fullTitle": "Loging in \"before all\" hook: codeceptjs.beforeSuite in \"Loging in\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.suiteSetup(suite)",
+              "err": {},
+              "uuid": "8ee8e473-9e3a-40de-930d-8375f2e658bd",
+              "parentUUID": "4033382a-f3db-4d00-945f-73b4bb61bdf4",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"before each\" hook: codeceptjs.before in \"Loging in\"",
+              "fullTitle": "Loging in \"before each\" hook: codeceptjs.before in \"Loging in\"",
+              "timedOut": false,
+              "duration": 9313,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.setup(suite)",
+              "err": {},
+              "uuid": "691f13f6-5754-433f-bfe7-db8dcfaedf96",
+              "parentUUID": "4033382a-f3db-4d00-945f-73b4bb61bdf4",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook: codeceptjs.afterSuite in \"Loging in\"",
+              "fullTitle": "Loging in \"after all\" hook: codeceptjs.afterSuite in \"Loging in\"",
+              "timedOut": false,
+              "duration": 4,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.suiteTeardown(suite)",
+              "err": {},
+              "uuid": "2f4fc352-fffb-43ac-a773-a81ae281f427",
+              "parentUUID": "4033382a-f3db-4d00-945f-73b4bb61bdf4",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"after each\" hook: codeceptjs.after in \"Loging in\"",
+              "fullTitle": "Loging in \"after each\" hook: codeceptjs.after in \"Loging in\"",
+              "timedOut": false,
+              "duration": 16205,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.teardown(suite)",
+              "err": {},
+              "uuid": "c64f00e5-02dc-435e-bb5a-c08b35639ec0",
+              "parentUUID": "4033382a-f3db-4d00-945f-73b4bb61bdf4",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "successful login",
+              "fullTitle": "Loging in successful login",
+              "timedOut": false,
+              "duration": 9306,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "runSteps(child.steps)",
+              "err": {},
+              "uuid": "5b959bc9-60ca-4d31-b193-a5b9b972005b",
+              "parentUUID": "4033382a-f3db-4d00-945f-73b4bb61bdf4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "failed login",
+              "fullTitle": "Loging in failed login",
+              "timedOut": false,
+              "duration": 7732,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "runSteps(child.steps)",
+              "err": {},
+              "uuid": "fa63d9c0-ff15-4135-a374-101c2e88e746",
+              "parentUUID": "4033382a-f3db-4d00-945f-73b4bb61bdf4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5b959bc9-60ca-4d31-b193-a5b9b972005b",
+            "fa63d9c0-ff15-4135-a374-101c2e88e746"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 17038,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        },
+        {
+          "uuid": "103a0f79-d1de-4a54-84ab-e3ae1a7c1dbd",
+          "title": "login",
+          "fullFile": "/Users/thomastupper/appium-codecept-POC/ios/login_test.js",
+          "file": "/ios/login_test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook: codeceptjs.beforeSuite in \"login\"",
+              "fullTitle": "login \"before all\" hook: codeceptjs.beforeSuite in \"login\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.suiteSetup(suite)",
+              "err": {},
+              "uuid": "bd9962d6-a928-4ad7-8acd-81c9ea8d206c",
+              "parentUUID": "103a0f79-d1de-4a54-84ab-e3ae1a7c1dbd",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"before each\" hook: codeceptjs.before in \"login\"",
+              "fullTitle": "login \"before each\" hook: codeceptjs.before in \"login\"",
+              "timedOut": false,
+              "duration": 8657,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.setup(suite)",
+              "err": {},
+              "uuid": "5d8459db-fc88-4769-a1ed-d0ddebc587d0",
+              "parentUUID": "103a0f79-d1de-4a54-84ab-e3ae1a7c1dbd",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook: codeceptjs.afterSuite in \"login\"",
+              "fullTitle": "login \"after all\" hook: codeceptjs.afterSuite in \"login\"",
+              "timedOut": false,
+              "duration": 9,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.suiteTeardown(suite)",
+              "err": {},
+              "uuid": "8303a4fe-865d-4ff6-bd7a-1fbbd8eda0c0",
+              "parentUUID": "103a0f79-d1de-4a54-84ab-e3ae1a7c1dbd",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"after each\" hook: finalize codeceptjs in \"login\"",
+              "fullTitle": "login \"after each\" hook: finalize codeceptjs in \"login\"",
+              "timedOut": false,
+              "duration": 31112,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.teardown(suite)",
+              "err": {},
+              "uuid": "c6033423-d95e-457f-b653-b9692c70f48e",
+              "parentUUID": "103a0f79-d1de-4a54-84ab-e3ae1a7c1dbd",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "I should be able to login with the correct username and password",
+              "fullTitle": "login: I should be able to login with the correct username and password",
+              "timedOut": false,
+              "duration": 10582,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "I }) => {\n  setTimeout(() => {\n    I.see('Username');\n  }, 3000);\n  I.click('//XCUIElementTypeTextField[@name=\"test-Username\"]');\n  I.fillField('//XCUIElementTypeTextField[@name=\"test-Username\"]', 'standard_user');\n  I.click('//XCUIElementTypeSecureTextField[@name=\"test-Password\"]');\n  I.fillField('//XCUIElementTypeSecureTextField[@name=\"test-Password\"]', 'secret_sauce');\n  I.click('//XCUIElementTypeOther[@name=\"test-LOGIN\"]');\n  I.waitForElement('(//XCUIElementTypeStaticText[@name=\"test-Item title\"])[1]', 3)\n  I.dontSeeElement('//XCUIElementTypeStaticText[@name=\"Username and password do not match any user in this service.\"]');",
+              "err": {},
+              "uuid": "8bfae906-bf13-4d7a-a451-566854dd4903",
+              "parentUUID": "103a0f79-d1de-4a54-84ab-e3ae1a7c1dbd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "I should not be able to login with an incorrect username or password",
+              "fullTitle": "login: I should not be able to login with an incorrect username or password",
+              "timedOut": false,
+              "duration": 8507,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "I }) => {\n  setTimeout(() => {\n    I.see('Username');\n  }, 3000);\n  I.click('//XCUIElementTypeTextField[@name=\"test-Username\"]');\n  I.fillField('//XCUIElementTypeTextField[@name=\"test-Username\"]', 'bob');\n  I.click('//XCUIElementTypeSecureTextField[@name=\"test-Password\"]');\n  I.fillField('//XCUIElementTypeSecureTextField[@name=\"test-Password\"]', 'secret_sauce');\n  I.click('//XCUIElementTypeOther[@name=\"test-LOGIN\"]');\n  I.seeElement('//XCUIElementTypeStaticText[@name=\"Username and password do not match any user in this service.\"]');\n  I.dontSeeElement('(//XCUIElementTypeStaticText[@name=\"test-Item title\"])[1]');",
+              "err": {},
+              "uuid": "4f9ff7e4-eb89-44d0-8361-b1bf3c35333d",
+              "parentUUID": "103a0f79-d1de-4a54-84ab-e3ae1a7c1dbd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "I should be able to see details",
+              "fullTitle": "login: I should be able to see details",
+              "timedOut": false,
+              "duration": 16064,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "I }) => {\n  // login\n  setTimeout(() => {\n    I.see('Username');\n  }, 3000);\n  I.click('//XCUIElementTypeTextField[@name=\"test-Username\"]');\n  I.fillField('//XCUIElementTypeTextField[@name=\"test-Username\"]', 'standard_user');\n  I.click('//XCUIElementTypeSecureTextField[@name=\"test-Password\"]');\n  I.fillField('//XCUIElementTypeSecureTextField[@name=\"test-Password\"]', 'secret_sauce');\n  I.click('//XCUIElementTypeOther[@name=\"test-LOGIN\"]');\n  I.waitForElement('(//XCUIElementTypeStaticText[@name=\"test-Item title\"])[1]', 3);\n  // should be able to click an image to get details\n  I.click('(//XCUIElementTypeStaticText[@name=\"test-Item title\"])[1]')\n  I.seeElement('//XCUIElementTypeStaticText[@name=\"carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.\"]');\n  I.click('//XCUIElementTypeOther[@name=\"test-BACK TO PRODUCTS\"]');\n  // should be able to click a label to see details\n  I.click('(//XCUIElementTypeStaticText[@name=\"test-Item title\"])[2]');\n  I.seeElement('//XCUIElementTypeStaticText[@name=\"A red light isn\\'t the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.\"]');\n  I.click('//XCUIElementTypeOther[@name=\"test-BACK TO PRODUCTS\"]');",
+              "err": {},
+              "uuid": "dde60b28-e73c-400c-b5a8-33a47825931d",
+              "parentUUID": "103a0f79-d1de-4a54-84ab-e3ae1a7c1dbd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8bfae906-bf13-4d7a-a451-566854dd4903",
+            "4f9ff7e4-eb89-44d0-8361-b1bf3c35333d",
+            "dde60b28-e73c-400c-b5a8-33a47825931d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 35153,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "9.0.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "mochawesome": {
+          "stdout": "./output/console.log",
+          "options": {
+            "reportDir": "./output",
+            "reportFilename": "report"
+          }
+        },
+        "mocha-junit-reporter": {
+          "stdout": "./output/console.log",
+          "options": {
+            "mochaFile": "./output/result.xml",
+            "attachments": true
+          }
+        },
+        "codeceptjs/lib/cli": {
+          "stdout": "-",
+          "options": {
+            "verbose": true,
+            "steps": true
+          }
+        }
+      },
+      "version": "5.2.0"
+    }
+  }
+}
