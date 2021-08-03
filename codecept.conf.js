@@ -9,22 +9,25 @@ const androidCaps = {
 };
 
 const iosCaps = {
-  
+  deviceName: 'iPhone 11',
+  automationName: 'XCUITest',
+  app: path.resolve('./sample_apps/iOS.apk')
+}
+
+const appiumAndroidConfig = {
+  platform: 'Android',
+  desiredCapabilities: androidCaps
+}
+
+const appiumIosConfig = {
+  platform: 'Android',
+  desiredCapabilities: androidCaps
 }
 
 exports.config = {
   output: './output',
   helpers: {
-    Appium: {
-      platform: 'Android',
-      desiredCapabilities: {
-        platformName: 'Android',
-        automationName: 'UiAutomator2',
-        deviceName: 'Android Emulator',
-        avd: 'Pixel_5_API_28',
-        app: path.resolve('./sample_apps/Zillow.apk')
-      }
-    },
+    Appium: appiumAndroidConfig,
     Mochawesome: {
       uniqueScreenshotNames: true
     }
