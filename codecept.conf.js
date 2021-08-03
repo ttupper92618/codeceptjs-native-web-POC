@@ -2,12 +2,14 @@ exports.config = {
   output: './output',
   helpers: {
     Appium: {
-      app: '/Users/thomastupper/appium-codecept-POC/sample_apps/Android.apk',
+      app: '/Users/thomastupper/appium-codecept-POC/sample_apps/Zillow.apk',
       platform: 'Android',
       desiredCapabilities: {
-        deviceName: 'Pixel 5 API 28',
         platformName: 'Android',
-        automationName: 'UiAutomator2'
+        automationName: 'UiAutomator2',
+        deviceName: 'Android Emulator',
+        // app: path.resolve('../myapp.apk'),
+        avd: 'Pixel_5_API_28'
       }
     },
     Mochawesome: {
