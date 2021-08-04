@@ -53,7 +53,7 @@ function spinUpForIos() {
     hooks: [],
     gherkin: {
       features: './features/*.feature',
-      steps: ['./step_definitions/steps.js']
+      steps: ['./ios/step_definitions/steps.js']
     },
     plugins: {
       screenshotOnFail: {

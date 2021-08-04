@@ -5,7 +5,8 @@ const androidCaps = {
   automationName: 'UiAutomator2',
   deviceName: 'Android Emulator',
   avd: 'Pixel_5_API_28',
-  app: path.resolve('./sample_apps/Zillow.apk')
+  app: path.resolve('./sample_apps/Android.apk'),
+  appActivity: 'com.swaglabsmobileapp.MainActivity'
 };
 
 const appiumAndroidConfig = {
@@ -55,7 +56,7 @@ function spinUpForAndroid() {
     hooks: [],
     gherkin: {
       features: './features/*.feature',
-      steps: ['./step_definitions/steps.js']
+      steps: ['./android/step_definitions/steps.js']
     },
     plugins: {
       screenshotOnFail: {
