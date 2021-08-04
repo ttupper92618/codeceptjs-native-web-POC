@@ -11,6 +11,7 @@ const androidCaps = {
 
 const appiumAndroidConfig = {
   platform: 'Android',
+  device: 'emulator',
   desiredCapabilities: androidCaps
 }
 
