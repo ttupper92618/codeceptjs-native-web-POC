@@ -200,4 +200,18 @@ npx codeceptjs run -c android.conf.js --reporter mochawesome --plugins allure --
 
 Note that you must execute these from within the '**codeceptjs-native-POC**' directory.
 
-If you watch your screen, having executed one of the above commands, you should be able to see the iOS or Android simulator spin up, and you should be able to watch the tests execute in real time.
+If you watch your screen, having executed one of the above commands, you should be able to see the iOS or Android simulator spin up, and you should be able to watch the tests execute in real time.  When the tests complete running, you should see an execution summary in your terminal:
+
+![](./assets/execution_summary.png?raw=true "Title")
+
+### **Reporting**
+
+One of codeceptJS's numerous capabilities is the ability to do flexible reporting.  One of these reporting mechanisms is integration with Allure, an open source reporting dashboard that provided graphical, easy to use reports.  To view reports using allure, execute the following from your terminal:
+
+```
+allure serve output
+```
+
+Having done so, you should see allure open in your default web browser, as seen below.  Feel free to navigate around Allure's section - there are too many great features to cover here.
+
+![](./assets/allure.png?raw=true "Title")
