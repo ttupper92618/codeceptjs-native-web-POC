@@ -56,7 +56,7 @@ function spinUpForAndroid() {
     teardown: null,
     hooks: [],
     gherkin: {
-      features: './features/*.feature',
+      features: './universal-features/*.feature',
       steps: ['./android/step_definitions/steps.js']
     },
     plugins: {

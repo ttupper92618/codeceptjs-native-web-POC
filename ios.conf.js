@@ -52,7 +52,7 @@ function spinUpForIos() {
     teardown: null,
     hooks: [],
     gherkin: {
-      features: './features/*.feature',
+      features: './universal-features/*.feature',
       steps: ['./ios/step_definitions/steps.js']
     },
     plugins: {
@@ -71,7 +71,7 @@ function spinUpForIos() {
       }
     },
     tests: './ios/*_test.js',
-    name: 'appium-codecept-Android-POC'
+    name: 'appium-codecept-universal-POC'
   }
 }
 
