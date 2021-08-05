@@ -1,5 +1,5 @@
 # codeceptjs-native-POC
-This project is a proof of concept implementation of using codeceptJS for testing native apps on android and iOS using Appium.
+This project is a proof of concept implementation of using codeceptJS for performing functional (UI) testing of native apps on android and iOS using Appium.
 
 CodeceptJS (https://codecept.io/) is a platform agnostic testing framework that can automate testing against web, hybrid, and mobile apps.
 It can execute tests against simulators, against real devices, and through cloud based device providers such as SauceLabs, Browserstack, and Perfecto.
@@ -139,3 +139,27 @@ echo $JAVA_HOME
 ```
 
 Having done so, you should see whatever it is that you entered for JAVA_HOME displayed in terminal.
+
+### **Clone the Repo**
+
+Having completed all of the foregoing steps, it is time to clone the repo.  To do so, type the following in terminal:
+
+```
+git clone https://github.com/ttupper92618/codeceptjs-native-POC.git
+```
+
+**Note** that you should only do this from the location where you want this project to be installed.  
+
+### **Install Dependencies**
+
+This project has a number of dependencies.  You must install these before you can execute tests.  To do so, first CD into the cloned repo:
+
+```
+cd codeceptjs-native-POC
+```
+
+Then execute the following:
+
+```
+npm i
+```
