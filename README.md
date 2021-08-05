@@ -163,3 +163,41 @@ Then execute the following:
 ```
 npm i
 ```
+
+### Sanity Check
+
+Now that you have finished all the requisite configuration, run appium-doctor to see if your installation is correct.  Correct any errors that appium doctor reveals; you do not need to correct the warnings.
+
+```
+appium-doctor
+```
+
+### Running Appium
+
+Before you can execute tests, you need to run Appium.  You may do so either by typing the following from terminal:
+
+```
+appium
+```
+
+Or by opening the desktop application and cliking the '**Start Server v...**' button from the desktop app:
+
+![](./assets/appium_mac.png?raw=true "Title")
+
+### **Executing Tests**
+
+If you have successfully executed all of the previous steps, you should now be able to execute tests.  At this time, this project does not support executing Android and iOS tests in parallel.  Instead, you must execute for one or the other using one of these commands in terminal:
+
+For iOS:
+```
+npx codeceptjs run -c ios.conf.js --reporter mochawesome --plugins allure --verbose
+```
+
+For Android:
+```
+npx codeceptjs run -c android.conf.js --reporter mochawesome --plugins allure --verbose
+```
+
+Note that you must execute these from within the '**codeceptjs-native-POC**' directory.
+
+If you watch your screen, having executed one of the above commands, you should be able to see the iOS or Android simulator spin up, and you should be able to watch the tests execute in real time.
