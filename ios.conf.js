@@ -21,9 +21,9 @@ function spinUpForIos() {
       },
       ResembleHelper : {
         require: 'codeceptjs-resemblehelper',
-        screenshotFolder : './tests/output/',
-        baseFolder: './tests/screenshots/base/',
-        diffFolder: './tests/screenshots/diff/'
+        screenshotFolder : './output/',
+        baseFolder: './screenshots/base/',
+        diffFolder: './screenshots/diff/'
       }
     },
     include: {
