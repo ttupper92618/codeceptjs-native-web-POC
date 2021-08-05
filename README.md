@@ -53,7 +53,7 @@ To test iOS apps using this project, you will need to install Xcode on your mac.
 
 ### **Install Android Studio**
 
-The test Android apps, you will need to install Android Studio.  You may do so by downloading the proper version for your machine from https://developer.android.com/studio, and then following the installation instructions available at https://developer.android.com/studio/install.
+To test Android apps, you will need to install Android Studio.  You may do so by downloading the proper version for your machine from https://developer.android.com/studio, and then following the installation instructions available at https://developer.android.com/studio/install.
 
 ### **Create an Android Virtual Device**
 
@@ -73,13 +73,17 @@ This will launch the AVD manager, allowing you to create a new Android Emulator.
 
 ![](./assets/define_AVD_1.png?raw=true "Title")
 
-After clicking '**Next**', you should see a screen allowing you to set the OS version that will be installed on the virtual device.  **IMPORTANT**: You must select '**Pie**', which has an API level of '**28**', as seen below.
+After clicking '**Next**', you should see a screen allowing you to set the OS version that will be installed on the virtual device.  **IMPORTANT**: You must select '**Pie**', which has an API level of '**28**', as seen below.  **Note** that if you have never created an AVD, you may need to download the specific SDK to your computer.  To do so, click the '**Download**' button immediately to the right of '**Pie**.'  Then click '**next**.'
 
 ![](./assets/define_AVD_2.png?raw=true "Title")
 
-After clicking '**Next**' on the previous screen, you should see a screen allowing you to set the name of the AVD you are creating, as seen below.  **IMPORTANT**: you **must** name your AVD '**Pixel 5 API 28**.'  This is because the configurations in this project are somewhat limited, and do not provide the ability to choose different devices at run-time.  That capability will be added at a later time.  The point is that the device must be named this way because that is what the configuration expects.  If you choose a different name, these tests **will not work.**
+After clicking '**Next**' on the previous screen, you should see a screen allowing you to set the name of the AVD you are creating, as seen below.  **IMPORTANT**: you **must** name your AVD '**Pixel 5 API 28**.'  This is because the configurations in this project are somewhat limited, and do not provide the ability to choose different devices at run-time.  That capability will be added at a later time.  The point is that the device must be named this way because that is what the configuration expects.  If you choose a different name, these tests **will not work.**  Once you have provided the name, click '**Next**.'
 
 ![](./assets/define_AVD_3.png?raw=true "Title")
+
+Now that you have defined an AVD, you should see it in the AVD manager's list of existing AVDs, as seen below.  If you wish, you may launch the AVD by clicking the green play icon (a rightward facing triangle) near the right side of the list entry for a given AVD.
+
+![](./assets/define_AVD_4.png?raw=true "Title")
 
 ### **Install Appium**
 
