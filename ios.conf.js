@@ -18,6 +18,12 @@ function spinUpForIos() {
       Appium: appiumIosConfig,
       Mochawesome: {
         uniqueScreenshotNames: true
+      },
+      ResembleHelper : {
+        require: 'codeceptjs-resemblehelper',
+        screenshotFolder : './tests/output/',
+        baseFolder: './tests/screenshots/base/',
+        diffFolder: './tests/screenshots/diff/'
       }
     },
     include: {
