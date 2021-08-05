@@ -55,7 +55,25 @@ To test iOS apps using this project, you will need to install Xcode on your mac.
 
 The test Android apps, you will need to install Android Studio.  You may do so by downloading the proper version for your machine from https://developer.android.com/studio, and then following the installation instructions available at https://developer.android.com/studio/install.
 
-You will also want to create an android emulator device using Android Studio's AVD manager.  To do so, launch 
+### **Create an Android Virtual Device**
+
+In order to run tests on Android, you will want to create an android emulator device using Android Studio's AVD manager.  To do so, launch Android Studio and then click the '**New Project**' button:
+
+![](./assets/android_studio_new_project.png?raw=true "Title")
+
+**Note** that you are only creating this project so that you may gain access to the AVD manager; you may choose any type for phone and tablet, as follows:
+
+![](./assets/android_studio_new_project_2.png?raw=true "Title")
+
+Once you have created your new project, it will open, giving you access to define a new AVD.  To do so, select '**Tools > AVD Manager**' from the tools menu as seen below:
+
+![](./assets/launch_AVD_manager.png?raw=true "Title")
+
+This will launch the AVD manager, allowing you to create a new Android Emulator.  To do so, click the '**Create Virtual Device**' button, then select '**Phone**' and '**Pixel 5**' on the following screen, as seen below.  After making these selections, click '**Next**'.
+
+![](./assets/define_AVD_1.png?raw=true "Title")
+
+
 
 ### **Install Appium**
 
