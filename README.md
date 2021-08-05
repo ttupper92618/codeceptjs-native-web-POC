@@ -104,6 +104,14 @@ appium-doctor
 
 **Note** that it is a good idea to install the Appium desktop app if you will be needing to identify element selectors (the selectors utilized to target specific elements in the UI) by inspecting an app directly (see the section '**Using Appium Viewer** later in this guide).  You can do so by downloading the installer at https://appium.io/, and following the installation instructions.
 
+### **Install Allure**
+
+Allure is an open source reporting framework that can produce beautiful, detailed reports.  This project requires you to install allure, and you may do so by entering the following into terminal:
+
+```
+npm install -g allure-commandline --save-dev
+```
+
 ### **Set Environment Variables**
 
 You must set the JAVA_HOME, ANDROID_HOME, and ANDROID_SDK_ROOT environment variables, otherwise tests will not run.  You may do so by entering the following in terminal:
@@ -215,3 +223,7 @@ allure serve output
 Having done so, you should see allure open in your default web browser, as seen below.  Feel free to navigate around Allure's section - there are too many great features to cover here.
 
 ![](./assets/allure.png?raw=true "Title")
+
+In addition to allure, this project will also produce XML reports for each test case, and also produces an HTML report.  The XML reports are located in the '**output**' directory within the project, and the HTML report (see example below) can be found in the '**mochawesome-report**' directory.
+
+![](./assets/mochawesome_report.png?raw=true "Title")
