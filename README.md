@@ -69,11 +69,17 @@ Once you have created your new project, it will open, giving you access to defin
 
 ![](./assets/launch_AVD_manager.png?raw=true "Title")
 
-This will launch the AVD manager, allowing you to create a new Android Emulator.  To do so, click the '**Create Virtual Device**' button, then select '**Phone**' and '**Pixel 5**' on the following screen, as seen below.  After making these selections, click '**Next**'.
+This will launch the AVD manager, allowing you to create a new Android Emulator.  To do so, click the '**Create Virtual Device**' button, then select '**Phone**' and '**Pixel 5**' on the following screen, as seen below.  After making these selections, click '**Next**.'
 
 ![](./assets/define_AVD_1.png?raw=true "Title")
 
+After clicking '**Next**', you should see a screen allowing you to set the OS version that will be installed on the virtual device.  **IMPORTANT**: You must select '**Pie**', which has an API level of '**28**', as seen below.
 
+![](./assets/define_AVD_2.png?raw=true "Title")
+
+After clicking '**Next**' on the previous screen, you should see a screen allowing you to set the name of the AVD you are creating, as seen below.  **IMPORTANT**: you **must** name your AVD '**Pixel 5 API 28**.'  This is because the configurations in this project are somewhat limited, and do not provide the ability to choose different devices at run-time.  That capability will be added at a later time.  The point is that the device must be named this way because that is what the configuration expects.  If you choose a different name, these tests **will not work.**
+
+![](./assets/define_AVD_3.png?raw=true "Title")
 
 ### **Install Appium**
 
