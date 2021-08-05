@@ -85,7 +85,57 @@ Now that you have defined an AVD, you should see it in the AVD manager's list of
 
 ![](./assets/define_AVD_4.png?raw=true "Title")
 
-### **Install Appium**
+### **Install Appium Doctor & Appium**
 
-In order to use codeceptJS to test mobile apps, you will need appium. Appium is a nodeJS based automation server which will orchestrate the execution of tests against native applications running on simulators, physical devices, and physical devices in the cloud.
+In order to use codeceptJS to test mobile apps, you will need appium. Appium is a nodeJS based automation server which will orchestrate the execution of tests against native applications running on simulators, physical devices, and physical devices in the cloud.  To install it, enter the following commands at a mac terminal prompt:
 
+```
+npm i -g appium-doctor
+```
+```
+npm i -g appium
+```
+
+This will install appium-doctor and Appium.  **Note** that appium doctor is a utility that can be used to verify your Appium installation.  Once you have completed the rest of the steps in this guide, run it from terminal by typing the following at the prompt:
+
+```
+appium-doctor
+```
+
+**Note** that it is a good idea to install the Appium desktop app if you will be needing to identify element selectors (the selectors utilized to target specific elements in the UI) by inspecting an app directly (see the section '**Using Appium Viewer** later in this guide).  You can do so by downloading the installer at https://appium.io/, and following the installation instructions.
+
+### **Set Environment Variables**
+
+You must set the JAVA_HOME, ANDROID_HOME, and ANDROID_SDK_ROOT environment variables, otherwise tests will not run.  You may do so by entering the following in terminal:
+
+```
+open ~/.bash_profile
+```
+
+This will open your bash profile using Textedit, and from there you can add the following to your profile:
+
+```
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/<your installed JDK version>/Contents/Home
+
+echo JAVA_HOME=$JAVA_HOME
+
+export ANDROID_HOME=/Users/<your user name>/Library/Android/sdk
+
+export ANDROID_SDK_ROOT=/Users/<your user name>/Library/Android/sdk
+```
+
+**Note** that you should replace the java SDK version in JAVA_HOME with whatever version you downloaded, and you should specify your username in the ANDROID_HOME and ANDROID_SDK_ROOT strings.  For example, I have specified '**jdk1.8.0_301.jdk**' for the JDK version, and '**thomastupper**' for the user name, since these are what these values are on my machine.  You will need to adjust these based on whatever is correct for your machine.
+
+Once you have entered the required values into your bash profile via Textedit, save the file and close it, then enter the following command into terminal:
+
+```
+source ~/.bash_profile
+```
+
+This will reload your profile.  You can verify a successful update by typing the following in terminal:
+
+```
+echo $JAVA_HOME
+```
+
+Having done so, you should see whatever it is that you entered for JAVA_HOME displayed in terminal.
