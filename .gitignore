@@ -1,4 +1,6 @@
 node_modules
 output
-mochawesome-report
+mochawesome-report/*
+screenshots/base/*
+screenshots/diff/*
 .DS_Store
