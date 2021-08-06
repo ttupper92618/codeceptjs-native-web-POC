@@ -255,3 +255,20 @@ Having done so, you should see allure open in your default web browser, as seen 
 In addition to allure, this project will also produce XML reports for each test case, and also produces an HTML report.  The XML reports are located in the '**output**' directory within the project, and the HTML report (see example below) can be found in the '**mochawesome-report**' directory.
 
 ![](./assets/mochawesome_report.png?raw=true "Title")
+
+### **Visual Testing**
+
+This project enables visual testing through resemble.js.  Resemble.js is an image comparison tool that can compare two images and produce a diff image that highlights the differences between the two images. It can be configured to ignore differences under a given threshold, and when tests fail, the base, capture, and diff images are provided through this project's reporting processes.  You can include visual testing in any test case simply by taking a screen capture and then comparing it to a base image, like so:
+
+```
+I.saveScreenshot('login_view.png');
+I.seeVisualDiff('login_view.png', {tolerance: 0});
+```
+
+To see how this works, one of the sample tests in this project will intentionally fail.  Based on the following base image, it will capture the login view, and produce a diff as seen below:
+
+| Base Image           | Screen Capture         | Diff                 |
+| -------------------- | ---------------------- | -------------------- |
+| ![](./assets/design_base.png?raw=true "Title") | ![](./assets/design_capture.png?raw=true "Title") | ![](./assets/design_diff.png?raw=true "Title") |
+
+Notice how the diff image highlights (in magenta) the areas that differ between the base and capture images.
