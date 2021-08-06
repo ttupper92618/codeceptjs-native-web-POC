@@ -1,10 +1,11 @@
 # **codeceptjs-native-POC**
 This project is a proof of concept implementation of using codeceptJS for performing functional (UI) testing of native apps on android and iOS using Appium.
 
-CodeceptJS (https://codecept.io/) is a platform agnostic testing framework that can automate testing against web, hybrid, and mobile apps.
-It can execute tests against simulators, against real devices, and through cloud based device providers such as SauceLabs, Browserstack, and Perfecto.
+CodeceptJS (https://codecept.io/) is a platform agnostic testing framework that can automate testing against web apps, hybrid apps, and native mobile apps. It can also execute tests against simulators, real devices, and via cloud based device providers such as SauceLabs, Browserstack, and Perfecto.  
 
-**Note:** This project is specifically intended to enable both iOS and Android native applications.  As such, the install instructions from this point forward are Mac specific, since a Mac is required in order to test the iOS apps.
+The syntax of tests for codeceptJS is extremely simple and approachable, and is consistent across testing targets, e.g. the same test syntax is used to test everything from web to native apps, which means that a person learning to write tests for one platform can easily transport their skills for testing against another.
+
+**Note:** This project is specifically intended to enable both **iOS** and **Android** native applications.  As such, the install instructions from this point forward are Mac specific, since a Mac is required in order to test the iOS apps.
 
 ## **Things this Project Does**
 
