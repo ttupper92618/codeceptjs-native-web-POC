@@ -1,4 +1,4 @@
-# codeceptjs-native-POC
+# **codeceptjs-native-POC**
 This project is a proof of concept implementation of using codeceptJS for performing functional (UI) testing of native apps on android and iOS using Appium.
 
 CodeceptJS (https://codecept.io/) is a platform agnostic testing framework that can automate testing against web, hybrid, and mobile apps.
@@ -6,7 +6,35 @@ It can execute tests against simulators, against real devices, and through cloud
 
 **Note:** This project is specifically intended to enable both iOS and Android native applications.  As such, the install instructions from this point forward are Mac specific, since a Mac is required in order to test the iOS apps.
 
+## **Things this Project Does**
+
+This project provides a number of features, including the following:
+
+- Android native app testing
+- iOS native app testing
+- Reporting via XML
+- Reporting via HTML
+- Reporting integration with the Allure reporting dashboard
+- Visual testing (comparing views at run-time with a baseline image representing design)
+- Automatic screen-shots on failed tests
+- Simple JS based tests with an approachable syntax
+- BDD style testing via Cucumber and Gherkin features
+
 ## **Getting Started**
+
+### **Nerd Note**
+
+This readme is written with n00bs in mind.  As a result, it exhaustively covers setup including all necessary dependencies.  It assumes zero preparation, so includes steps for doing things like:
+
+- Installing homebrew
+- Installing node and npm
+- Installing java
+- Installing xcode
+- Installing and setting up Android Studio
+- Installing appium
+- Setting environment variables
+
+Feel free to skip any steps you have already satisfied, but please recognize that unless all of them are satisfied, this project will not successfully execute tests.
 
 ### **Install Homebrew**
 
