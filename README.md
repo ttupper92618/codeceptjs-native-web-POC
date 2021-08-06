@@ -288,6 +288,8 @@ This POC will be extended in the following manner some time soon:
 
 - Expanded visual testing support.
 
+- Universal step definitions; allowing a single step definition to contain both iOS and Android code, making defining steps a once and done process.
+
 ## **Known Issues**
 
 - This project executes tests against android applications using uiautomator, the native ui automation tool provided by Google.  The appium community variant (uiautomator2) will not work with this project.
