@@ -22,6 +22,7 @@ This project provides a number of features, including the following:
 - Simple JS based tests with an approachable syntax
 - BDD style testing via Cucumber and Gherkin features
 - Universal features; one set of BDD features to drive testing across both Android and iOS
+- Universal step definitions; 'one and done' feature steps that can execute against android or iOS
 
 ## **Getting Started**
 
@@ -288,7 +289,7 @@ This POC will be extended in the following manner some time soon:
 
 - Expanded visual testing support.
 
-- Universal step definitions; allowing a single step definition to contain both iOS and Android code, making defining steps a once and done process.
+- Better set-up and tear-down handling.
 
 ## **Known Issues**
 

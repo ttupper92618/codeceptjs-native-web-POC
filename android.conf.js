@@ -63,7 +63,7 @@ function spinUpForAndroid() {
     hooks: [],
     gherkin: {
       features: './universal-features/*.feature',
-      steps: ['./android/step_definitions/steps.js']
+      steps: ['./universal-steps/steps.js']
     },
     plugins: {
       screenshotOnFail: {
