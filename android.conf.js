@@ -2,7 +2,7 @@ const path = require('path');
 
 const androidCaps = {
   platformName: 'Android',
-  automationName: 'UiAutomator2',
+  automationName: 'UiAutomator1',
   deviceName: 'Android Emulator',
   avd: 'Pixel_5_API_28',
   app: path.resolve('./sample_apps/Android.apk'),
