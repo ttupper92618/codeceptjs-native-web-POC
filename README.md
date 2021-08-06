@@ -15,6 +15,7 @@ This project provides a number of features, including the following:
 - iOS native app testing
 - Reporting via XML
 - Reporting via HTML
+- Reporting via JSON
 - Reporting integration with the Allure reporting dashboard
 - Visual testing (comparing views at run-time with a baseline image representing design)
 - Automatic screen-shots on failed tests
