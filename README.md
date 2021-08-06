@@ -19,6 +19,7 @@ This project provides a number of features, including the following:
 - Automatic screen-shots on failed tests
 - Simple JS based tests with an approachable syntax
 - BDD style testing via Cucumber and Gherkin features
+- Universal features; one set of BDD features to drive testing across both Android and iOS
 
 ## **Getting Started**
 
@@ -272,3 +273,21 @@ To see how this works, one of the sample tests in this project will intentionall
 | <img src="./assets/design_base.png" width="250"/> | <img src="./assets/design_capture.png" width="250"/> | <img src="./assets/design_diff.png" width="250"/> |
 
 Notice how the diff image highlights (in magenta) the areas that differ between the base and capture images.
+
+## **Roadmap**
+
+This POC will be extended in the following manner some time soon:
+
+- Integration with ReportPortal.io, an open source containerized report aggregator allowing report aggregation from test runs across different platforms, e.g. web, ios native, android native, and so on.
+
+- Multi-target execution; being able to run tests against multiple devices and platforms at the same time.
+
+- Better abstraction of run strings, allowing test runs to be made flexibly with different features enabled / disabled.
+
+- Expanded visual testing support.
+
+## **Known Issues**
+
+- This project executes tests against android applications using uiautomator, the native ui automation tool provided by Google.  The appium community variant (uiautomator2) will not work with this project.
+
+- Visual testing does not properly handle differences between devices or device platforms, which makes the the implementation more restrictive and brittle than desired.
