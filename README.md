@@ -267,8 +267,8 @@ I.seeVisualDiff('login_view.png', {tolerance: 0});
 
 To see how this works, one of the sample tests in this project will intentionally fail.  Based on the following base image, it will capture the login view, and produce a diff as seen below:
 
-| Base Image           | Screen Capture         | Diff                 |
-| -------------------- | ---------------------- | -------------------- |
+| Base Image            | Screen Capture        | Diff                  |
+| --------------------- | --------------------- | --------------------- |
 | ![](./assets/design_base.png?raw=true "Title") | ![](./assets/design_capture.png?raw=true "Title") | ![](./assets/design_diff.png?raw=true "Title") |
 
 Notice how the diff image highlights (in magenta) the areas that differ between the base and capture images.
