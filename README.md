@@ -269,6 +269,6 @@ To see how this works, one of the sample tests in this project will intentionall
 
 | Base Image            | Screen Capture        | Diff                  |
 | --------------------- | --------------------- | --------------------- |
-| <img src="./assets/design_base.png" width="300"/> | <img src="./assets/design_capture.png" width="300"/> | <img src="./assets/design_diff.png" width="300"/> |
+| <img src="./assets/design_base.png" width="250"/> | <img src="./assets/design_capture.png" width="250"/> | <img src="./assets/design_diff.png" width="250"/> |
 
 Notice how the diff image highlights (in magenta) the areas that differ between the base and capture images.
