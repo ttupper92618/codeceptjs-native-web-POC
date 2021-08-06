@@ -269,6 +269,6 @@ To see how this works, one of the sample tests in this project will intentionall
 
 | Base Image            | Screen Capture        | Diff                  |
 | --------------------- | --------------------- | --------------------- |
-| ![](./assets/design_base.png?raw=true "Title") | ![](./assets/design_capture.png?raw=true "Title") | ![](./assets/design_diff.png?raw=true "Title") |
+| <img src="./assets/design_base.png" width="201"/> | <img src="./assets/design_capture.png" width="201"/> | <img src="./assets/design_diff.png" width="201"/> |
 
 Notice how the diff image highlights (in magenta) the areas that differ between the base and capture images.
