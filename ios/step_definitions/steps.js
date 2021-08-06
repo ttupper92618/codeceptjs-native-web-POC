@@ -2,15 +2,14 @@ const { I } = inject();
 // Add in your custom step files
 
 Given('I have launched the app', () => {
-  setTimeout(() => {
-    I.see('Username');
-  }, 3000);
+  I.wait(3);
+  I.see('Username');
+  I.saveScreenshot('login_view.png');
 });
 
 Given('I have logged in', () => {
-  setTimeout(() => {
-    I.see('Username');
-  }, 3000);
+  I.wait(3);
+  I.see('Username');
   I.click('//XCUIElementTypeTextField[@name="test-Username"]');
   I.fillField('//XCUIElementTypeTextField[@name="test-Username"]', 'standard_user');
   I.click('//XCUIElementTypeSecureTextField[@name="test-Password"]');
@@ -51,4 +50,9 @@ Then('I should not be able to log in', () => {
 Then('I should be able to see product details', () => {
   I.seeElement('//XCUIElementTypeStaticText[@name="A red light isn\'t the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included."]');
   I.click('//XCUIElementTypeOther[@name="test-BACK TO PRODUCTS"]');
+});
+
+Then('I should not see a visual difference between login and the login designs', () => {
+  I.saveScreenshot('login_view.png');
+  I.seeVisualDiff('login_view.png', {tolerance: 0});
 });

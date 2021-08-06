@@ -1,9 +1,8 @@
 Feature('login');
 
 Scenario('I should be able to login with the correct username and password', ({ I }) => {
-  setTimeout(() => {
-    I.seeElement('//android.widget.ScrollView[@content-desc="Home-screen"]/android.view.ViewGroup/android.widget.TextView[2]');
-  }, 3000);
+  I.wait(3);
+  I.see('Username');
   /*I.click('//android.widget.EditText[@content-desc="test-Username"]');
   I.fillField('//android.widget.EditText[@content-desc="test-Username"]', 'standard_user');
   I.click('//android.widget.EditText[@content-desc="test-Password"]');
@@ -14,9 +13,8 @@ Scenario('I should be able to login with the correct username and password', ({ 
 });
 
 Scenario('I should not be able to login with an incorrect username or password', ({ I }) => {
-  setTimeout(() => {
-    I.seeElement('//android.widget.ScrollView[@content-desc="Home-screen"]/android.view.ViewGroup/android.widget.TextView[2]');
-  }, 3000);
+  I.wait(3);
+  I.see('Username');
   /*I.click('//android.widget.EditText[@content-desc="test-Username"]');
   I.fillField('//android.widget.EditText[@content-desc="test-Username"]', 'bob');
   I.click('//android.widget.EditText[@content-desc="test-Password"]');
@@ -28,9 +26,8 @@ Scenario('I should not be able to login with an incorrect username or password',
 
 Scenario('I should be able to see details', ({ I }) => {
   // login
-  setTimeout(() => {
-    I.seeElement('//android.widget.ScrollView[@content-desc="Home-screen"]/android.view.ViewGroup/android.widget.TextView[2]');
-  }, 3000);
+  I.wait(3);
+  I.see('Username');
   /*I.click('//android.widget.EditText[@content-desc="test-Username"]');
   I.fillField('//android.widget.EditText[@content-desc="test-Username"]', 'standard_user');
   I.click('//android.widget.EditText[@content-desc="test-Password"]');

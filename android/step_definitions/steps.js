@@ -2,15 +2,14 @@ const { I } = inject();
 // Add in your custom step files
 
 Given('I have launched the app', () => {
-  setTimeout(() => {
-    I.see('Username');
-  }, 3000);
+  I.wait(3);
+  I.see('Username');
+  I.saveScreenshot('login_view.png');
 });
 
 Given('I have logged in', () => {
-  setTimeout(() => {
-    I.see('Username');
-  }, 3000);
+  I.wait(3);
+  I.see('Username');
   I.click('//android.widget.EditText[@content-desc="test-Username"]');
   I.fillField('//android.widget.EditText[@content-desc="test-Username"]', 'standard_user');
   I.click('//android.widget.EditText[@content-desc="test-Password"]');
@@ -51,4 +50,9 @@ Then('I should not be able to log in', () => {
 Then('I should be able to see product details', () => {
   I.seeElement('//android.view.ViewGroup[@content-desc="test-Description"]/android.widget.TextView[2]');
   I.click('//android.view.ViewGroup[@content-desc="test-BACK TO PRODUCTS"]');
+});
+
+Then('I should not see a visual difference between login and the login designs', () => {
+  I.saveScreenshot('login_view.png');
+  I.seeVisualDiff('login_view.png', {tolerance: 2, prepareBaseImage: false});
 });
