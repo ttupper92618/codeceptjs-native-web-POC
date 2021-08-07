@@ -230,12 +230,12 @@ If you have successfully executed all of the previous steps, you should now be a
 
 For iOS:
 ```
-npx codeceptjs run -c ios.conf.js --reporter mochawesome --plugins allure --verbose
+npm run ios
 ```
 
 For Android:
 ```
-npx codeceptjs run -c android.conf.js --reporter mochawesome --plugins allure --verbose
+npm run android
 ```
 
 Note that you must execute these from within the '**codeceptjs-native-POC**' directory.

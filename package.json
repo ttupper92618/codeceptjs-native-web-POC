@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "android": "npx codeceptjs run -c android.conf.js --reporter mochawesome --plugins allure --verbose",
+    "ios": "npx codeceptjs run -c ios.conf.js --reporter mochawesome --plugins allure --verbose"
   },
   "keywords": [],
   "author": "",
