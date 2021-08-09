@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "android": "npx codeceptjs run -c android.conf.js --reporter mochawesome --plugins allure --verbose",
-    "ios": "npx codeceptjs run -c ios.conf.js --reporter mochawesome --plugins allure --verbose"
+    "android": "npx codeceptjs run -c ./configurations/android.conf.js --reporter mochawesome --plugins allure --verbose",
+    "ios": "npx codeceptjs run -c ./configurations/ios.conf.js --reporter mochawesome --plugins allure --verbose"
   },
   "keywords": [],
   "author": "",

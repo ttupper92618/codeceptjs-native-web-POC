@@ -17,7 +17,7 @@ const appiumAndroidConfig = {
 
 function spinUpForAndroid() {
   exports.config = {
-    output: './output',
+    output: '../output',
     helpers: {
       Appium: appiumAndroidConfig,
       Mochawesome: {
@@ -25,13 +25,13 @@ function spinUpForAndroid() {
       },
       ResembleHelper : {
         require: 'codeceptjs-resemblehelper',
-        baseFolder: './screenshots/base/',
-        diffFolder: './screenshots/diff/',
+        baseFolder: '../screenshots/base/',
+        diffFolder: '../screenshots/diff/',
         prepareBaseImage: true
       }
     },
     include: {
-      I: './steps_file.js'
+      I: '../steps_file.js'
     },
     mocha: {
       reporterOptions: {
@@ -43,16 +43,16 @@ function spinUpForAndroid() {
           }
         },
         mochawesome: {
-          stdout: './output/console.log',
+          stdout: '../output/console.log',
           options: {
-            reportDir: './output',
+            reportDir: '../output',
             reportFilename: 'report'
           }
         },
         'mocha-junit-reporter': {
-          stdout: './output/console.log',
+          stdout: '../output/console.log',
           options: {
-            mochaFile: './output/result.xml',
+            mochaFile: '../output/result.xml',
             attachments: true
           }
         }
@@ -62,8 +62,8 @@ function spinUpForAndroid() {
     teardown: null,
     hooks: [],
     gherkin: {
-      features: './universal-features/*.feature',
-      steps: ['./universal-steps/steps.js']
+      features: '../universal-features/*.feature',
+      steps: ['../universal-steps/steps.js']
     },
     plugins: {
       screenshotOnFail: {
@@ -80,7 +80,7 @@ function spinUpForAndroid() {
         enabled: true
       }
     },
-    tests: './android/*_test.js',
+    tests: '../android/*_test.js',
     name: 'appium-codecept-Android-POC'
   }
 }
