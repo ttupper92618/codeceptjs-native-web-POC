@@ -70,7 +70,8 @@ function spinUpForAndroid() {
         enabled: true
       },
       allure: {
-        enabled: true
+        enabled: true,
+        outputDir: '../output/'
       },
       pauseOnFail: {},
       retryFailedStep: {

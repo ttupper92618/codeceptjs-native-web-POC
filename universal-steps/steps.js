@@ -4,7 +4,14 @@ const { I } = inject();
 Given('I have launched the app', () => {
   I.wait(3);
   I.see('Username');
-  I.saveScreenshot('login_view.png');
+
+  I.runOnIOS(() => {
+    I.saveScreenshot('login_view_ios.png');
+  });
+
+  I.runOnAndroid(() => {
+    I.saveScreenshot('login_view_android.png');
+  }); 
 });
 
 Given('I have logged in', () => {
@@ -66,7 +73,7 @@ When('I click on a product', () => {
   });
 
   I.runOnAndroid(() => {
-    I.click('(//android.widget.TextView[@content-desc="test-Item title"])[2]');
+    I.click('Sauce Labs Backpack');
   });
 });
 
@@ -100,8 +107,8 @@ Then('I should not be able to log in', () => {
 
 Then('I should be able to see product details', () => {
   I.runOnIOS(() => {
-  I.seeElement('//XCUIElementTypeStaticText[@name="A red light isn\'t the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included."]');
-  I.click('//XCUIElementTypeOther[@name="test-BACK TO PRODUCTS"]');
+    I.seeElement('//XCUIElementTypeStaticText[@name="A red light isn\'t the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included."]');
+    I.click('//XCUIElementTypeOther[@name="test-BACK TO PRODUCTS"]');
   });
 
   I.runOnAndroid(() => {
@@ -111,6 +118,13 @@ Then('I should be able to see product details', () => {
 });
 
 Then('I should not see a visual difference between login and the login designs', () => {
-  I.saveScreenshot('login_view.png');
-  I.seeVisualDiff('login_view.png', {tolerance: 0});
+  I.runOnIOS(() => {
+    I.saveScreenshot('login_view_ios.png');
+    I.seeVisualDiff('login_view_ios.png', {tolerance: 0});
+  });
+
+  I.runOnAndroid(() => {
+    I.saveScreenshot('login_view_android.png');
+    I.seeVisualDiff('login_view_android.png', {tolerance: 0});
+  });
 });
