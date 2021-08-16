@@ -1,25 +1,68 @@
 const path = require('path');
+const securityToken = 'eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2ZDM2NmJiNS01NDAyLTQ4MmMtYTVhOC1kODZhODk4MDYyZjIifQ.eyJpYXQiOjE2Mjg1Mzk2NzcsImp0aSI6IjU2YzdhZTY1LTQ1MTMtNGM4Ny1hMGRkLWNkZjcwZTU5YWZkYSIsImlzcyI6Imh0dHBzOi8vYXV0aDMucGVyZmVjdG9tb2JpbGUuY29tL2F1dGgvcmVhbG1zL3RyaWFsLXBlcmZlY3RvbW9iaWxlLWNvbSIsImF1ZCI6Imh0dHBzOi8vYXV0aDMucGVyZmVjdG9tb2JpbGUuY29tL2F1dGgvcmVhbG1zL3RyaWFsLXBlcmZlY3RvbW9iaWxlLWNvbSIsInN1YiI6IjExZTAwOTdkLTBhZDAtNDRiNi1hMzFhLWQxODlkN2Q1NGQ2MyIsInR5cCI6Ik9mZmxpbmUiLCJhenAiOiJvZmZsaW5lLXRva2VuLWdlbmVyYXRvciIsIm5vbmNlIjoiMzJhMzFhOGMtMDM2My00NDMzLWEyNTQtMjdhMjA1NzFlZTNkIiwic2Vzc2lvbl9zdGF0ZSI6IjQ5OTE1NjEwLWRjNzUtNDA1My05MjE3LWM5YTBlNDNlYmExNiIsInNjb3BlIjoib3BlbmlkIG9mZmxpbmVfYWNjZXNzIHByb2ZpbGUgZW1haWwifQ.7FsrtbdVfZkR-Ut0-4YpIgdu367eSaRiN1MOKTenT08';
+const host = 'trial';
 
 const androidCaps = {
+  securityToken: securityToken,
+  automationName: 'Appium',
   platformName: 'Android',
-  automationName: 'UiAutomator1',
-  deviceName: 'Android Emulator',
-  avd: 'Pixel_5_API_28',
-  app: path.resolve('./sample_apps/Android.apk'),
-  appActivity: 'com.swaglabsmobileapp.MainActivity'
+  platformVersion: '10',
+  manufacturer: 'Samsung',
+  model: 'Galaxy S20',
+  app: 'PRIVATE:1628539608154_Android.apk',
+  autoLaunch: true,
+  autoInstrument: false,
+  appActivity: 'com.swaglabsmobileapp.MainActivity',
+  browserName: '',
+  takesScreenshot: false,
+  screenshotOnError: true,
+  openDeviceTimeout: 5,
+  waitForAvailableLicense: true,
+  user: 'thomastupper92618@gmail.com'
 };
 
 const appiumAndroidConfig = {
-  platform: 'Android',
-  device: 'emulator',
-  desiredCapabilities: androidCaps
+  securityToken: securityToken,
+  protocol: 'http',
+  hostname: host + '.perfectomobile.com',
+  path: '/nexperience/perfectomobile/wd/hub',
+  port: 80,
+  sync: true,
+  bail: 0,
+  desiredCapabilities: androidCaps,
+  app: 'PRIVATE:1628539608154_Android.apk',
 }
 
 function spinUpForAndroid() {
   exports.config = {
     output: '../output',
+    maxInstances: 1,
     helpers: {
       Appium: appiumAndroidConfig,
+      /*WebDriver: {
+        host: host + '.perfectomobile.com',
+        path: '/nexperience/perfectomobile/wd/hub',
+        port: 80,
+        restart: false,
+
+        desiredCapabilities: {
+            user: 'thomastupper92618@gmail.com',
+            securityToken: securityToken,
+            automationName: 'PerfectoMobile',
+            platformName: 'Android',
+            platformVersion: '10',
+            manufacturer: 'Samsung',
+            model: 'Galaxy A21',
+            app: 'PRIVATE:1628539608154_Android.apk',
+            autoLaunch: true,
+            autoInstrument: true,
+            appActivity: 'com.swaglabsmobileapp.MainActivity',
+            takesScreenshot: false,
+            screenshotOnError: true,
+            openDeviceTimeout: 5,
+            waitForAvailableLicense: true
+        }
+      },*/
       Mochawesome: {
         uniqueScreenshotNames: true
       },
@@ -70,7 +113,8 @@ function spinUpForAndroid() {
         enabled: true
       },
       allure: {
-        enabled: true
+        enabled: true,
+        enableScreenshotDiffPlugin: true
       },
       pauseOnFail: {},
       retryFailedStep: {

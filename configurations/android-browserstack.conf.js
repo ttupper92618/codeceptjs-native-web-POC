@@ -3,15 +3,19 @@ const path = require('path');
 const androidCaps = {
   platformName: 'Android',
   automationName: 'UiAutomator1',
-  deviceName: 'Android Emulator',
-  avd: 'Pixel_5_API_28',
-  app: path.resolve('./sample_apps/Android.apk'),
-  appActivity: 'com.swaglabsmobileapp.MainActivity'
+  appActivity: 'com.swaglabsmobileapp.MainActivity',
+  app: "bs://da87a9be5b622b3869c3a3e6bf37edcc380ac89f",
+  host: "hub-cloud.browserstack.com",
+  port: 4444,
+  platform: "Android",
+  user: "thomastupper_tDGUVg",
+  key: "XCEzNqFM37RTesApsyBs",
+  device: "Google Pixel 3",
 };
 
 const appiumAndroidConfig = {
   platform: 'Android',
-  device: 'emulator',
+  // device: 'Google Pixel 3',
   desiredCapabilities: androidCaps
 }
 
@@ -19,7 +23,15 @@ function spinUpForAndroid() {
   exports.config = {
     output: '../output',
     helpers: {
-      Appium: appiumAndroidConfig,
+      Appium: {
+        app: "bs://da87a9be5b622b3869c3a3e6bf37edcc380ac89f",
+        host: "hub.browserstack.com/wd/hub",
+        // port: 4444,
+        platform: "Android",
+        user: "thomastupper_tDGUVg",
+        key: "XCEzNqFM37RTesApsyBs",
+        device: "Samsung Galaxy S20"
+      },
       Mochawesome: {
         uniqueScreenshotNames: true
       },

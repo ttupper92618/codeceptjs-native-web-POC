@@ -66,7 +66,8 @@ function spinUpForIos() {
         enabled: true
       },
       allure: {
-        enabled: true
+        enabled: true,
+        enableScreenshotDiffPlugin: true
       },
       pauseOnFail: {},
       retryFailedStep: {
