@@ -4,13 +4,13 @@ const host = 'trial';
 
 const androidCaps = {
   securityToken: securityToken,
-  automationName: 'Appium',
+  automationName: 'PerfectoMobile',
+  autoLaunch: true,
   platformName: 'Android',
   platformVersion: '10',
   manufacturer: 'Samsung',
   model: 'Galaxy S20',
   app: 'PRIVATE:1628539608154_Android.apk',
-  autoLaunch: true,
   autoInstrument: false,
   appActivity: 'com.swaglabsmobileapp.MainActivity',
   browserName: '',
@@ -39,30 +39,6 @@ function spinUpForAndroid() {
     maxInstances: 1,
     helpers: {
       Appium: appiumAndroidConfig,
-      /*WebDriver: {
-        host: host + '.perfectomobile.com',
-        path: '/nexperience/perfectomobile/wd/hub',
-        port: 80,
-        restart: false,
-
-        desiredCapabilities: {
-            user: 'thomastupper92618@gmail.com',
-            securityToken: securityToken,
-            automationName: 'PerfectoMobile',
-            platformName: 'Android',
-            platformVersion: '10',
-            manufacturer: 'Samsung',
-            model: 'Galaxy A21',
-            app: 'PRIVATE:1628539608154_Android.apk',
-            autoLaunch: true,
-            autoInstrument: true,
-            appActivity: 'com.swaglabsmobileapp.MainActivity',
-            takesScreenshot: false,
-            screenshotOnError: true,
-            openDeviceTimeout: 5,
-            waitForAvailableLicense: true
-        }
-      },*/
       Mochawesome: {
         uniqueScreenshotNames: true
       },
