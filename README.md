@@ -277,6 +277,24 @@ To see how this works, one of the sample tests in this project will intentionall
 
 Notice how the diff image highlights (in magenta) the areas that differ between the base and capture images.
 
+## **Perfecto**
+
+In addition to simulator testing, this POC is capable of executing tests against real devices using Perfecto cloud.  To do so, you may execute tests against either ios or android using one of the following commands via terminal:
+
+```
+npm run ios-perfecto
+```
+
+```
+npm run android-perfecto
+```
+
+This will run by consuming the appropriate config file.  These files are located in the configurations folder of the project:
+
+![](./assets/configurations.png?raw=true "Title")
+
+**Please note** that executing tests using perfecto requires a perfecto slug and key; the values within this POC for host, securityToken, and user need to be changed in the ios and android perfecto configurations so as to reflect those values which are appropriate for your Perfecto license.  The values in this POC are for a Perfecto trial and it will eventually expire.
+
 ## **Roadmap**
 
 This POC will be extended in the following manner some time soon:
