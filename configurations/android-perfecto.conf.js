@@ -4,7 +4,7 @@ const host = 'trial';
 
 const androidCaps = {
   securityToken: securityToken,
-  automationName: 'PerfectoMobile',
+  automationName: 'Appium',
   autoLaunch: true,
   platformName: 'Android',
   platformVersion: '10',
