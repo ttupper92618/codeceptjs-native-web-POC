@@ -19,73 +19,73 @@ Given('I have logged in', () => {
   I.see('Username');
 
   I.runOnIOS(() => {
-    I.click('//XCUIElementTypeTextField[@name="test-Username"]');
+    I.tap('//XCUIElementTypeTextField[@name="test-Username"]');
     I.fillField('//XCUIElementTypeTextField[@name="test-Username"]', 'standard_user');
-    I.click('//XCUIElementTypeSecureTextField[@name="test-Password"]');
+    I.tap('//XCUIElementTypeSecureTextField[@name="test-Password"]');
     I.fillField('//XCUIElementTypeSecureTextField[@name="test-Password"]', 'secret_sauce');
-    I.click('//XCUIElementTypeOther[@name="test-LOGIN"]');
+    I.tap('//XCUIElementTypeOther[@name="test-LOGIN"]');
   });
 
   I.runOnAndroid(() => {
-    I.click('//android.widget.EditText[@content-desc="test-Username"]');
+    I.tap('//android.widget.EditText[@content-desc="test-Username"]');
     I.fillField('//android.widget.EditText[@content-desc="test-Username"]', 'standard_user');
-    I.click('//android.widget.EditText[@content-desc="test-Password"]');
+    I.tap('//android.widget.EditText[@content-desc="test-Password"]');
     I.fillField('//android.widget.EditText[@content-desc="test-Password"]', 'secret_sauce');
-    I.click('//android.view.ViewGroup[@content-desc="test-LOGIN"]');
+    I.tap('//android.view.ViewGroup[@content-desc="test-LOGIN"]');
   });
 });
 
 When('I have entered a valid username and password', () => {
   I.runOnIOS(() => {
-    I.click('//XCUIElementTypeTextField[@name="test-Username"]');
+    I.tap('//XCUIElementTypeTextField[@name="test-Username"]');
     I.fillField('//XCUIElementTypeTextField[@name="test-Username"]', 'standard_user');
-    I.click('//XCUIElementTypeSecureTextField[@name="test-Password"]');
+    I.tap('//XCUIElementTypeSecureTextField[@name="test-Password"]');
     I.fillField('//XCUIElementTypeSecureTextField[@name="test-Password"]', 'secret_sauce');
   });
 
   I.runOnAndroid(() => {
-    I.click('//android.widget.EditText[@content-desc="test-Username"]');
+    I.tap('//android.widget.EditText[@content-desc="test-Username"]');
     I.fillField('//android.widget.EditText[@content-desc="test-Username"]', 'standard_user');
-    I.click('//android.widget.EditText[@content-desc="test-Password"]');
+    I.tap('//android.widget.EditText[@content-desc="test-Password"]');
     I.fillField('//android.widget.EditText[@content-desc="test-Password"]', 'secret_sauce');
   });
 });
 
 When('I have entered an invalid username or password', () => {
   I.runOnIOS(() => {
-    I.click('//XCUIElementTypeTextField[@name="test-Username"]');
+    I.tap('//XCUIElementTypeTextField[@name="test-Username"]');
     I.fillField('//XCUIElementTypeTextField[@name="test-Username"]', 'bob');
-    I.click('//XCUIElementTypeSecureTextField[@name="test-Password"]');
+    I.tap('//XCUIElementTypeSecureTextField[@name="test-Password"]');
     I.fillField('//XCUIElementTypeSecureTextField[@name="test-Password"]', 'secret_sauce');
   });
 
   I.runOnAndroid(() => {
-    I.click('//android.widget.EditText[@content-desc="test-Username"]');
+    I.tap('//android.widget.EditText[@content-desc="test-Username"]');
     I.fillField('//android.widget.EditText[@content-desc="test-Username"]', 'bob');
-    I.click('//android.widget.EditText[@content-desc="test-Password"]');
+    I.tap('//android.widget.EditText[@content-desc="test-Password"]');
     I.fillField('//android.widget.EditText[@content-desc="test-Password"]', 'secret_sauce');
   });
 });
 
 When('I click on a product', () => {
   I.runOnIOS(() => {
-    I.click('(//XCUIElementTypeStaticText[@name="test-Item title"])[2]');
+    I.tap('(//XCUIElementTypeStaticText[@name="test-Item title"])[2]');
   });
 
   I.runOnAndroid(() => {
-    I.click('Sauce Labs Backpack');
+    I.tap('Sauce Labs Backpack');
   });
 });
 
 Then('I should be able to log in', () => {
   I.runOnIOS(() => {
-    I.click('//XCUIElementTypeOther[@name="test-LOGIN"]');
+    I.tap('//XCUIElementTypeOther[@name="test-LOGIN"]');
     I.waitForElement('(//XCUIElementTypeStaticText[@name="test-Item title"])[1]', 3)
     I.dontSeeElement('//XCUIElementTypeStaticText[@name="Username and password do not match any user in this service."]');
   });
 
   I.runOnAndroid(() => {
-    I.click('//android.view.ViewGroup[@content-desc="test-LOGIN"]');
+    I.tap('//android.view.ViewGroup[@content-desc="test-LOGIN"]');
     I.waitForElement('//android.view.ViewGroup[@content-desc="test-Cart drop zone"]/android.view.ViewGroup/android.widget.TextView', 3)
     I.dontSeeElement('//android.view.ViewGroup[@content-desc="test-Error message"]/android.widget.TextView');
   });
@@ -93,13 +93,13 @@ Then('I should be able to log in', () => {
 
 Then('I should not be able to log in', () => {
   I.runOnIOS(() => {
-    I.click('//XCUIElementTypeOther[@name="test-LOGIN"]');
+    I.tap('//XCUIElementTypeOther[@name="test-LOGIN"]');
     I.seeElement('//XCUIElementTypeStaticText[@name="Username and password do not match any user in this service."]');
     I.dontSeeElement('(//XCUIElementTypeStaticText[@name="test-Item title"])[1]');
   });
 
   I.runOnAndroid(() => {
-    I.click('//android.view.ViewGroup[@content-desc="test-LOGIN"]');
+    I.tap('//android.view.ViewGroup[@content-desc="test-LOGIN"]');
     I.seeElement('//android.view.ViewGroup[@content-desc="test-Error message"]/android.widget.TextView');
     I.dontSeeElement('//android.view.ViewGroup[@content-desc="test-Cart drop zone"]/android.view.ViewGroup/android.widget.TextView');
   });
@@ -108,12 +108,12 @@ Then('I should not be able to log in', () => {
 Then('I should be able to see product details', () => {
   I.runOnIOS(() => {
     I.seeElement('//XCUIElementTypeStaticText[@name="A red light isn\'t the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included."]');
-    I.click('//XCUIElementTypeOther[@name="test-BACK TO PRODUCTS"]');
+    I.tap('//XCUIElementTypeOther[@name="test-BACK TO PRODUCTS"]');
   });
 
   I.runOnAndroid(() => {
     I.seeElement('//android.view.ViewGroup[@content-desc="test-Description"]/android.widget.TextView[2]');
-    I.click('//android.view.ViewGroup[@content-desc="test-BACK TO PRODUCTS"]');
+    I.tap('//android.view.ViewGroup[@content-desc="test-BACK TO PRODUCTS"]');
   });
 });
 
