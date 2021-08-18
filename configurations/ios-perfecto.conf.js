@@ -14,12 +14,13 @@ const iosCaps = {
   openDeviceTimeout: 5,
   waitForAvailableLicense: true,
   user: 'thomastupper92618@gmail.com',
-  platformName: 'iOS',
+  platformName: 'ios',
   platformVersion: '14.2',
   location: 'NA-US-BOS',
   resolution: '1125x2436',
   manufacturer: 'Apple',
-  model: 'iPhone-11 Pro'
+  model: 'iPhone-11 Pro',
+  iOSResign: true
 };
 
 const appiumIosConfig = {
@@ -32,7 +33,10 @@ const appiumIosConfig = {
   bail: 0,
   desiredCapabilities: iosCaps,
   app: 'PRIVATE:1629243373819_iOS.ipa',
-  browserName: ''
+  platformName: 'ios',
+  browserName: '',
+  automationName: 'XCUITest',
+  iOSResign: true
 }
 
 function spinUpForIos() {
