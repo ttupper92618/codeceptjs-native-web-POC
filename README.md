@@ -23,6 +23,8 @@ This project provides a number of features, including the following:
 - BDD style testing via Cucumber and Gherkin features
 - Universal features; one set of BDD features to drive testing across both Android and iOS
 - Universal step definitions; 'one and done' feature steps that can execute against android or iOS
+- Local simulator testing
+- Cloud device testing via Perfecto
 
 ## **Getting Started**
 
