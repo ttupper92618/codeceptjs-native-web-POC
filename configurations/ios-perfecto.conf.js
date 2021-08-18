@@ -6,7 +6,7 @@ const iosCaps = {
   securityToken: securityToken,
   automationName: 'XCUITest',
   autoLaunch: true,
-  app: 'PRIVATE:1629243373819_iOS.ipa',
+  app: 'PRIVATE:iOS.ipa',
   autoInstrument: true,
   browserName: '',
   takesScreenshot: false,

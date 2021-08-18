@@ -10,7 +10,7 @@ const androidCaps = {
   platformVersion: '10',
   manufacturer: 'Samsung',
   model: 'Galaxy S20',
-  app: 'PRIVATE:1628539608154_Android.apk',
+  app: 'PRIVATE:Android.apk',
   autoInstrument: false,
   appActivity: 'com.swaglabsmobileapp.MainActivity',
   browserName: '',
