@@ -291,11 +291,19 @@ npm run ios-perfecto
 npm run android-perfecto
 ```
 
-This will run by consuming the appropriate config file.  These files are located in the configurations folder of the project:
+This will run against either Android or iOS in the Perfecto cloud by consuming the appropriate config file.  These files are located in the configurations folder of the project:
 
 ![](./assets/configurations.png?raw=true "Title")
 
 **Please note** that executing tests using perfecto requires a perfecto slug and key; the values within this POC for host, securityToken, and user need to be changed in the ios and android perfecto configurations so as to reflect those values which are appropriate for your Perfecto license.  The values in this POC are for a Perfecto trial and it will eventually expire.
+
+## **Notes on Writing Tests**
+
+The test syntax of codeceptJS is approachable and simple; test runs revolve around the "I" method and it's children.  These simple methods can be used to find elements, fill fields, click or tap elements, perform swipe gestures, and much more. For example, the method "I.click(<locator>)" would click the element specified by the given locator on a web page.  I.tap would perform the equivalent operation for a native mobile app.
+
+Example tests are provided in this POC to perform basic operations against the sample-app (included), and documentation concerning all of the available "I" methods can be found [here](https://codecept.io/helpers/Appium.html#methods).  Below you can see a sample test condition.
+
+![](./assets/test.png?raw=true "Title")
 
 ## **Roadmap**
 
