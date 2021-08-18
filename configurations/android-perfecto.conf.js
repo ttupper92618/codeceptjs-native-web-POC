@@ -30,7 +30,7 @@ const appiumAndroidConfig = {
   sync: true,
   bail: 0,
   desiredCapabilities: androidCaps,
-  app: 'PRIVATE:1628539608154_Android.apk',
+  app: 'PRIVATE:Android.apk',
   browserName: ''
 }
 

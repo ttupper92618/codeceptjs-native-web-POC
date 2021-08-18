@@ -32,7 +32,7 @@ const appiumIosConfig = {
   sync: true,
   bail: 0,
   desiredCapabilities: iosCaps,
-  app: 'PRIVATE:1629243373819_iOS.ipa',
+  app: 'PRIVATE:iOS.ipa',
   platformName: 'ios',
   browserName: '',
   automationName: 'XCUITest',
