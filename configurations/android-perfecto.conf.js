@@ -31,6 +31,7 @@ const appiumAndroidConfig = {
   bail: 0,
   desiredCapabilities: androidCaps,
   app: 'PRIVATE:1628539608154_Android.apk',
+  browserName: ''
 }
 
 function spinUpForAndroid() {
@@ -101,7 +102,7 @@ function spinUpForAndroid() {
       }
     },
     tests: '../android/*_test.js',
-    name: 'appium-codecept-Android-POC'
+    name: 'appium-codecept-universal-POC'
   }
 }
 

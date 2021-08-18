@@ -94,7 +94,7 @@ function spinUpForAndroid() {
       }
     },
     tests: '../android/*_test.js',
-    name: 'appium-codecept-Android-POC'
+    name: 'appium-codecept-universal-POC'
   }
 }
 
