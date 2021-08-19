@@ -48,12 +48,6 @@ function spinUpForAndroid() {
         baseFolder: '../screenshots/base/',
         diffFolder: '../screenshots/diff/',
         prepareBaseImage: true
-      },
-      CmdHelper: {
-        require: '../node_modules/codeceptjs-cmdhelper',
-        options: {
-            'showOutput': true
-        },
       }
     },
     include: {
