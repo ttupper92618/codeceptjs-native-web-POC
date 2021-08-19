@@ -4,12 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "android": "npx codeceptjs run -c ./configurations/android.conf.js --reporter mochawesome --plugins allure --verbose",
     "ios": "npx codeceptjs run -c ./configurations/ios.conf.js --reporter mochawesome --plugins allure --verbose",
     "android-perfecto": "npx codeceptjs run -c ./configurations/android-perfecto.conf.js --reporter mochawesome --plugins allure --verbose",
-    "ios-perfecto": "npx codeceptjs run -c ./configurations/ios-perfecto.conf.js --reporter mochawesome --plugins allure --verbose",
-    "android-browserstack": "npx codeceptjs run -c ./configurations/android-browserstack.conf.js --reporter mochawesome --plugins allure --verbose"
+    "ios-perfecto": "npx codeceptjs run -c ./configurations/ios-perfecto.conf.js --reporter mochawesome --plugins allure --verbose"
   },
   "keywords": [],
   "author": "",
