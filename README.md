@@ -321,6 +321,8 @@ Sample tests for this approach can be seen in the "iOS" and "android" folders:
 
 In contrast to isolation testing, unified testing leverages a single set of universal test cases that can target both iOS and android devices from the same scenarios or BDD steps.  This dramatically reduces test duplication and can lead to a cleaner and more easily maintained test suite.  In this POC, unified test examples can be found in the "universal-tests"  and "universal-steps" folders, for direct and BDD style tests, respectively.
 
+![](./assets/universal-tests.png?raw=true "Title")
+
 ## **Roadmap**
 
 This POC will be extended in the following manner some time soon:
