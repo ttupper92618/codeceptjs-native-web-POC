@@ -323,6 +323,14 @@ In contrast to isolation testing, unified testing leverages a single set of univ
 
 ![](./assets/universal-tests.png?raw=true "Title")
 
+## **BDD with Gherkin**
+
+This POC demonstrates BDD (behavior driven development) style testing through the specification of features with Gherkin, and steps constructed using the same syntax used with non-BDD style testing.  The difference is that test execution is driven first by the natural-language feature specification, each element of which has an accompanying step which is executed when a given clause in the feature specification is reached.  As an example, consider the following feature and how it's clauses map directly to steps:
+
+![](./assets/feature.png?raw=true "Title")
+
+![](./assets/steps.png?raw=true "Title")
+
 ## **Roadmap**
 
 This POC will be extended in the following manner some time soon:
