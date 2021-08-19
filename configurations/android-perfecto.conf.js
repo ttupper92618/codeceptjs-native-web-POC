@@ -50,7 +50,7 @@ function spinUpForAndroid() {
         prepareBaseImage: true
       },
       CmdHelper: {
-        require: './node_modules/codeceptjs-cmdhelper',
+        require: '../node_modules/codeceptjs-cmdhelper',
         options: {
             'showOutput': true
         },
