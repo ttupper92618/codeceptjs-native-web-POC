@@ -305,6 +305,22 @@ Example tests are provided in this POC to perform basic operations against the s
 
 ![](./assets/test.png?raw=true "Title")
 
+## **Differing Modes of Operation**
+
+This POC demonstrates two different approaches to testing.  The approach you choose is largely up to your preference and the needs of your testing workflow.
+
+### **Isolation Testing**
+
+In a general sense, this POC demonstrates what may be thought of as "isolation testing" and "unified testing".  Isolation Testing may be understood as "having separate test cases for both IOS and Android".  In this approach, you can have different test cases for your android application vs. your iOS application.  Advantages to this approach include increased flexibility and the ability to tailor test cases explicitly.  Disadvantages include the increased complexity that arises from having to manage what is essentially two different testing libraries.
+
+Sample tests for this approach can be seen in the "iOS" and "android" folders:
+
+![](./assets/isolated_tests.png?raw=true "Title")
+
+### **Unified Testing**
+
+In contrast to isolation testing, unified testing leverages a single set of universal test cases that can target both iOS and android devices from the same scenarios or BDD steps.  This dramatically reduces test duplication and can lead to a cleaner and more easily maintained test suite.  In this POC, unified test examples can be found in the "universal-tests"  and "universal-steps" folders, for direct and BDD style tests, respectively.
+
 ## **Roadmap**
 
 This POC will be extended in the following manner some time soon:
