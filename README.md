@@ -247,6 +247,16 @@ For Web:
 npm run web
 ```
 
+For iOS via Perfecto:
+```
+npm run ios-perfecto
+```
+
+For Android via Perfecto:
+```
+npm run android-perfecto
+```
+
 Note that you must execute these from within the '**codeceptjs-native-POC**' directory.
 
 If you watch your screen, having executed one of the above commands, you should be able to see the iOS or Android simulator spin up, and you should be able to watch the tests execute in real time.  When the tests complete running, you should see an execution summary in your terminal:
