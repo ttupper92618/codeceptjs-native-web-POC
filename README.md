@@ -1,11 +1,11 @@
 # **codeceptjs-native-POC**
-This project is a proof of concept implementation of using codeceptJS for performing functional (UI) testing of native apps on android and iOS using Appium.
+This project is a proof of concept implementation of using codeceptJS for performing functional (UI) testing of native apps on android and iOS using Appium, and also testing of web apps via Playwright.
 
 CodeceptJS (https://codecept.io/) is a platform agnostic testing framework that can automate testing against web apps, hybrid apps, and native mobile apps. It can also execute tests against simulators, real devices, and via cloud based device providers such as SauceLabs, Browserstack, and Perfecto.  
 
 The syntax of tests for codeceptJS is extremely simple and approachable, and is consistent across testing targets, e.g. the same test syntax is used to test everything from web to native apps, which means that a person learning to write tests for one platform can easily transport their skills for testing against another.
 
-**Note:** This project is specifically intended to enable both **iOS** and **Android** native applications.  As such, the install instructions from this point forward are Mac specific, since a Mac is required in order to test the iOS apps.
+**Note:** This project is specifically intended to enable both **iOS** and **Android** native applications.  As such, the install instructions from this point forward are Mac specific, since a Mac is required in order to test the iOS apps.  If you wish only to utilize the web portion of the test suite, or if you are only going to use cloud services, you may omit the steps for installing XCode or Android Studio as desired.  If you would prefer a windows machine, you may do so; only the iOS specific portions of this project would be unavailable.
 
 ## **Things this Project Does**
 
@@ -13,6 +13,7 @@ This project provides a number of features, including the following:
 
 - Android native app testing
 - iOS native app testing
+- Web application testing
 - Reporting via XML
 - Reporting via HTML
 - Reporting via JSON
@@ -24,6 +25,7 @@ This project provides a number of features, including the following:
 - Universal features; one set of BDD features to drive testing across both Android and iOS
 - Universal step definitions; 'one and done' feature steps that can execute against android or iOS
 - Local simulator testing
+- Local browser testing
 - Cloud device testing via Perfecto
 
 ## **Getting Started**
@@ -240,6 +242,11 @@ For Android:
 npm run android
 ```
 
+For Web:
+```
+npm run web
+```
+
 Note that you must execute these from within the '**codeceptjs-native-POC**' directory.
 
 If you watch your screen, having executed one of the above commands, you should be able to see the iOS or Android simulator spin up, and you should be able to watch the tests execute in real time.  When the tests complete running, you should see an execution summary in your terminal:
@@ -316,6 +323,8 @@ In a general sense, this POC demonstrates what may be thought of as "isolation t
 Sample tests for this approach can be seen in the "iOS" and "android" folders:
 
 ![](./assets/isolated_tests.png?raw=true "Title")
+
+**Note** that web tests must be containerized in their own folder, as demonstrated in this project.  At the present time you cannot test against web using the universal features / steps / tests - web test cases must be isolated.  You may still use BDD features.
 
 ### **Unified Testing**
 
