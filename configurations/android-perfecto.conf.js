@@ -6,10 +6,6 @@ const androidCaps = {
   securityToken: securityToken,
   automationName: 'Appium',
   autoLaunch: true,
-  platformName: 'Android',
-  platformVersion: '10',
-  manufacturer: 'Samsung',
-  model: 'Galaxy S20',
   app: 'PRIVATE:Android.apk',
   autoInstrument: false,
   appActivity: 'com.swaglabsmobileapp.MainActivity',
@@ -18,7 +14,13 @@ const androidCaps = {
   screenshotOnError: true,
   openDeviceTimeout: 5,
   waitForAvailableLicense: true,
-  user: 'ttupper@finanovate.com'
+  user: 'ttupper@finanovate.com',
+  platformName: 'Android',
+  platformVersion: '10',
+  location: 'NA-US-BOS',
+  resolution: '1440x3200',
+  manufacturer: 'Samsung',
+  model: 'Galaxy S20'
 };
 
 const appiumAndroidConfig = {
