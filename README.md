@@ -350,6 +350,73 @@ This POC demonstrates BDD (behavior driven development) style testing through th
 
 ![](./assets/steps.png?raw=true "Title")
 
+## **Obtaining Locators**
+
+When writing tests, it will be necessary to have locators for the elements the test needs to interact with.  In the simple cases of web applications, these can be obtained by using a web inspector such as Chrome DevTools to inspect the markup of the application.  In many cases, a simple element ID is sufficient.  In cases where no ID is present, a CSS class or other data attribute may be used.  And some elements can be identified merely through their text strings.
+
+In the case of native mobile apps, things get somewhat more complex.  It is necessary to use an inspector to examine the application.  Fortunately, Appium bundles an inspector, and what follows is a brief tutorial on how to use Appium Inspector to identify element locators for Android and iOS native apps.
+
+### **Launching Appium Inspector**
+
+In order for you to identify locators, you will need to have installed Appium Desktop by following the Appium installation instructions found earlier in this document.  Once you have Appium desktop installed, the process of launching the inspector is relatively straightforward.  First, launch Appium desktop, and click the blue "Start server" button as seen below:
+
+![](./assets/appium1.png?raw=true "Title")
+
+Having done so, you will see the Appium server spin up, and give you a console like display, as seen below:
+
+![](./assets/appium2.png?raw=true "Title")
+
+Click on the magnifying glass icon highlited in the picture above.  This will cause the Appium inspector to spin up, as seen below.  It is here where configuration will become more complex.
+
+![](./assets/appium3.png?raw=true "Title")
+
+In order for you to use inspector on an actual app, you must provide what are known as "capabilities".  Appium server uses these to spin up and expose the locators of a given application.  In order for this to be as painless as possible, I am providing the capabilities you will need for both the sample Android and iOS apps.  These will work assuming you have cloned the repo into the root of your user on a mac, e.g. **users/your user name**.  If you change the location in which you clone the repo e.g. you do not do so into users/your user... then you will have to identify the correct path to the **sample_apps** directory.  In any case, the capabilities that will work given the default structure are as follows:
+
+**Android:**
+
+```
+{
+  "platformName": "Android",
+  "app": "/Users/<your username>/appium-codecept-POC/sample_apps/Android.apk",
+  "avd": "Pixel_5_API_28",
+  "automationName": "UiAutomator2",
+  "deviceName": "Pixel 5 API 28",
+  "appActivity": "com.swaglabsmobileapp.MainActivity"
+}
+```
+
+**iOS**
+
+```
+{
+  "platformName": "iOS",
+  "app": "/Users/<your username>/appium-codecept-POC/sample_apps/iOS.app",
+  "automationName": "XCUITest",
+  "deviceName": "iPhone 11",
+  "resign": true
+}
+```
+
+You should tab the edit icon in the Appium inspector, found within the "JSON Representation" block, and copy and paste the capabilities you want, as seen here:
+
+![](./assets/capabilities.png?raw=true "Title")
+
+Having done so, click on the "Start Session" button and eventually you should say a window that looks like the image below:
+
+![](./assets/app_explorer.png?raw=true "Title")
+
+On the left of this image, you can see a representation of the app.  You may click on the various elements of the app and you will see the possible selectors appear on the right.  In most cases for the native apps, you will want to use either the accessibility id or the xpath.  You can also select certain elements by just their text string.  You can copy and paste these values into your tests for operations such as "I.tap", e.g.:
+
+```
+I.tap('//XCUIElementTypeTextField[@name="test-Username"]');
+```
+
+### **Locator Notes**
+
+There are many ways to locate elements, ranging from xpath to simple text.  What you should use will be based on the application.  In general, you should work to have your dev teams add accessibility ids to interactive elements.  This is because accessibility ids are less likely to change than xpath locators, and they are also faster.  For web, you will want to use ids, class names, etc.
+
+For more information about locators and what you cann and cannot do using this framework, read the locator documentation found here:  https://codecept.io/locators/
+
 ## **Roadmap**
 
 This POC will be extended in the following manner some time soon:
@@ -368,4 +435,4 @@ This POC will be extended in the following manner some time soon:
 
 - This project executes tests against android applications using uiautomator, the native ui automation tool provided by Google.  The appium community variant (uiautomator2) will not work with this project.
 
-- Visual testing does not properly handle differences between devices or device platforms, which makes the the implementation more restrictive and brittle than desired.
+- Visual testing does not properly handle differences between devices or device platforms, which makes the implementation more restrictive and brittle than desired.
