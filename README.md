@@ -401,7 +401,7 @@ You should tab the edit icon in the Appium inspector, found within the "JSON Rep
 
 ![](./assets/capabilities.png?raw=true "Title")
 
-Having done so, click on the "Start Session" button and eventually you should say a window that looks like the image below:
+Having done so, click on the "Start Session" button.  This will launch the app in the simulator, and eventually you should see a window that looks like the image below:
 
 ![](./assets/app_explorer.png?raw=true "Title")
 
@@ -410,6 +410,8 @@ On the left of this image, you can see a representation of the app.  You may cli
 ```
 I.tap('//XCUIElementTypeTextField[@name="test-Username"]');
 ```
+
+You can directly interact with the app by using the 'Tap' and 'Send Keys' buttons, which will behave as if you have performed that action in the running app.  You can also perform actions directly in the running app, such logging in or navigating to other sections, and you may refresh the view in Appium Inspector by clicking the refresh icon in the top toolbar.
 
 ### **Locator Notes**
 
