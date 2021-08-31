@@ -228,6 +228,8 @@ Or by opening the desktop application and cliking the '**Start Server v...**' bu
 
 ![](./assets/appium_mac.png?raw=true "Title")
 
+It is recommended that you launch the desktop app, as this will give you access to Appium Inspector, allowing you to identify the locators for interactive elements.
+
 ### **Executing Tests**
 
 If you have successfully executed all of the previous steps, you should now be able to execute tests.  At this time, this project does not support executing Android and iOS tests in parallel.  Instead, you must execute for one or the other using one of these commands in terminal:
