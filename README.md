@@ -192,14 +192,14 @@ Having completed all of the foregoing steps, it is time to clone the repo.  To d
 git clone https://github.com/ttupper92618/codeceptjs-native-web-POC.git
 ```
 
-**Note** that you should only do this from the location where you want this project to be installed.  
+**Note** that you should only do this from the location where you want this project to be installed.  It is recommended that you install it at the root of **users/your username**.
 
 ### **Install Dependencies**
 
 This project has a number of dependencies.  You must install these before you can execute tests.  To do so, first CD into the cloned repo:
 
 ```
-cd codeceptjs-native-POC
+cd codeceptjs-native-web-POC
 ```
 
 Then execute the following:
