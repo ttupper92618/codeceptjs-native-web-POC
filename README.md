@@ -322,6 +322,8 @@ Example tests are provided in this POC to perform basic operations against the s
 
 ![](./assets/test.png?raw=true "Title")
 
+**Note** that it is important to understand that some methods are specific to native testing, and others are not.  In most cases, the documentation linked above will specify if a method is Appium specific, and what platforms (iOS or Android) it can serve.  In general, if the method is not noted as being restricted to a native device, then it will work on web as well.  But take care: there are methods like **"click"** which are meant for use on web, but on mobile the native app specific method for the same purpose is **"tap"**.  You should exercise care to ensure that if there is a native specific method that accomplishes the same purpose as a more general method, you should use the one specific to native applications when writing tests for those applications.  In most cases, either will work but in some, as is the case with **"tap"** and **"click"**, they are not interchangeable and will not work in the wrong testing context.
+
 ## **Differing Modes of Operation**
 
 This POC demonstrates two different approaches to testing.  The approach you choose is largely up to your preference and the needs of your testing workflow.
@@ -334,13 +336,17 @@ Sample tests for this approach can be seen in the "iOS" and "android" folders:
 
 ![](./assets/isolated_tests.png?raw=true "Title")
 
-**Note** that web tests must be containerized in their own folder, as demonstrated in this project.  At the present time you cannot test against web using the universal features / steps / tests - web test cases must be isolated.  You may still use BDD features.
-
 ### **Unified Testing**
 
 In contrast to isolation testing, unified testing leverages a single set of universal test cases that can target both iOS and android devices from the same scenarios or BDD steps.  This dramatically reduces test duplication and can lead to a cleaner and more easily maintained test suite.  In this POC, unified test examples can be found in the "universal-tests"  and "universal-steps" folders, for direct and BDD style tests, respectively.
 
 ![](./assets/universal-tests.png?raw=true "Title")
+
+### **Special Note on Web Testing**
+
+Although it is possible to combine tests for iOS and Android into a universal test suite through the use of the **I.runOnIOS** and **I.runOnAndroid** wrappers, this is not possible for web testing at this time because there is not a device agnostic wrapper for web.  **Note** that there *is* an **I.ronOnWeb** method, but it is only applicable when running web tests on a mobile device or simulator; It will not execute tests in a browser outside of that context.  The general rule to understand here is this: for the reasons stated above, when writing tests for web browsers, those tests must be separate and must be placed in the "web" folder, as this is where the web configuration will look for them.  If you are using BDD, then the features and steps must likewise be within the web folder, as seen below:
+
+![](./assets/web_folder.png?raw=true "Title")
 
 ## **BDD with Gherkin**
 
@@ -417,7 +423,7 @@ You can directly interact with the app by using the 'Tap' and 'Send Keys' button
 
 There are many ways to locate elements, ranging from xpath to simple text.  What you should use will be based on the application.  In general, you should work to have your dev teams add accessibility ids to interactive elements.  This is because accessibility ids are less likely to change than xpath locators, and they are also faster.  For web, you will want to use ids, class names, etc.
 
-For more information about locators and what you cann and cannot do using this framework, read the locator documentation found here:  https://codecept.io/locators/
+For more information about locators and what you can and cannot do using this framework, read the locator documentation found here:  https://codecept.io/locators/
 
 ## **Roadmap**
 
