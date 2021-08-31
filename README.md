@@ -189,7 +189,7 @@ Having done so, you should see whatever it is that you entered for JAVA_HOME dis
 Having completed all of the foregoing steps, it is time to clone the repo.  To do so, type the following in terminal:
 
 ```
-git clone https://github.com/ttupper92618/codeceptjs-native-POC.git
+git clone https://github.com/ttupper92618/codeceptjs-native-web-POC.git
 ```
 
 **Note** that you should only do this from the location where you want this project to be installed.  
