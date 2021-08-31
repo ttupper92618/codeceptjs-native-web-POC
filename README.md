@@ -259,7 +259,7 @@ For Android via Perfecto:
 npm run android-perfecto
 ```
 
-Note that you must execute these from within the '**codeceptjs-native-POC**' directory.
+Note that you must execute these from within the '**codeceptjs-native-web-POC**' directory.
 
 If you watch your screen, having executed one of the above commands, you should be able to see the iOS or Android simulator spin up, and you should be able to watch the tests execute in real time.  When the tests complete running, you should see an execution summary in your terminal:
 
@@ -267,17 +267,17 @@ If you watch your screen, having executed one of the above commands, you should 
 
 ### **Reporting**
 
-One of codeceptJS's numerous capabilities is the ability to do flexible reporting.  One of these reporting mechanisms is integration with Allure, an open source reporting dashboard that provided graphical, easy to use reports.  To view reports using allure, execute the following from your terminal:
+One of codeceptJS's numerous capabilities is the ability to do flexible reporting.  One of these reporting mechanisms is integration with Allure, an open source reporting dashboard that provides graphical, easy to use reports.  To view reports using allure, execute the following from your terminal:
 
 ```
 allure serve output
 ```
 
-Having done so, you should see allure open in your default web browser, as seen below.  Feel free to navigate around Allure's section - there are too many great features to cover here.
+Having done so, you should see allure open in your default web browser, as seen below.  Feel free to navigate around Allure's sections - there are too many great features to cover here.
 
 ![](./assets/allure.png?raw=true "Title")
 
-In addition to allure, this project will also produce XML reports for each test case, and also produces an HTML report.  The XML reports are located in the '**output**' directory within the project, and the HTML report (see example below) can be found in the '**mochawesome-report**' directory.
+In addition to allure, this project will also produce XML and JSON reports for each test case, and also produces an HTML report.  The XML reports are located in the '**output**' directory within the project, and the HTML and JSON reports (see the HTML example below) can be found in the '**mochawesome-report**' directory.
 
 ![](./assets/mochawesome_report.png?raw=true "Title")
 
@@ -318,7 +318,7 @@ This will run against either Android or iOS in the Perfecto cloud by consuming t
 
 ## **Notes on Writing Tests**
 
-The test syntax of codeceptJS is approachable and simple; test runs revolve around the "I" method and it's children.  These simple methods can be used to find elements, fill fields, click or tap elements, perform swipe gestures, and much more. For example, the method "I.click(<locator>)" would click the element specified by the given locator on a web page.  I.tap would perform the equivalent operation for a native mobile app.
+The test syntax of codeceptJS is approachable and simple; test runs revolve around the "I" method and its children.  These simple methods can be used to find elements, fill fields, click or tap elements, perform swipe gestures, and much more. For example, the method "I.click(<locator>)" would click the element specified by the given locator on a web page.  I.tap would perform the equivalent operation for a native mobile app.
 
 Example tests are provided in this POC to perform basic operations against the sample-app (included), and documentation concerning all of the available "I" methods can be found [here](https://codecept.io/helpers/Appium.html#methods).  Below you can see a sample test condition.
 
@@ -405,7 +405,7 @@ In order for you to use inspector on an actual app, you must provide what are kn
 }
 ```
 
-You should tab the edit icon in the Appium inspector, found within the "JSON Representation" block, and copy and paste the capabilities you want, as seen here:
+You should click the edit icon in the Appium inspector, found within the "JSON Representation" block, and copy and paste the capabilities you want, as seen here:
 
 ![](./assets/capabilities.png?raw=true "Title")
 
@@ -419,7 +419,7 @@ On the left of this image, you can see a representation of the app.  You may cli
 I.tap('//XCUIElementTypeTextField[@name="test-Username"]');
 ```
 
-You can directly interact with the app by using the 'Tap' and 'Send Keys' buttons, which will behave as if you have performed that action in the running app.  You can also perform actions directly in the running app, such logging in or navigating to other sections, and you may refresh the view in Appium Inspector by clicking the refresh icon in the top toolbar.
+You can directly interact with the app by using the 'Tap' and 'Send Keys' buttons, which will behave as if you have performed that action in the running app.  You can also perform actions directly in the running app, such as logging in or navigating to other sections, and you may refresh the view in Appium Inspector by clicking the refresh icon in the top toolbar.
 
 ### **Locator Notes**
 
