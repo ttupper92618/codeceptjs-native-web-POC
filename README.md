@@ -427,6 +427,12 @@ There are many ways to locate elements, ranging from xpath to simple text.  What
 
 For more information about locators and what you can and cannot do using this framework, read the locator documentation found here:  https://codecept.io/locators/
 
+## **Architecture** 
+
+For those readers nerdy enough to want an architectural rendering of how this solution works, here is a chart:
+
+![](./assets/TestArchitecture-Universal.png?raw=true "Title")
+
 ## **Roadmap**
 
 This POC will be extended in the following manner some time soon:
