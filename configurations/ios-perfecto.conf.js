@@ -48,12 +48,12 @@ function spinUpForIos() {
       Mochawesome: {
         uniqueScreenshotNames: true
       },
-      ResembleHelper : {
+      /*ResembleHelper : {
         require: 'codeceptjs-resemblehelper',
         baseFolder: '../screenshots/base/',
         diffFolder: '../screenshots/diff/',
         prepareBaseImage: true
-      }
+      }*/
     },
     include: {
       I: '../steps_file.js'

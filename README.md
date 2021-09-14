@@ -449,6 +449,8 @@ This POC will be extended in the following manner some time soon:
 
 ## **Known Issues**
 
+- Visual testing is disabled at the moment because of issues under some versions of node.
+
 - This project executes tests against android applications using uiautomator, the native ui automation tool provided by Google.  The appium community variant (uiautomator2) will not work with this project.
 
 - Visual testing does not properly handle differences between devices or device platforms, which makes the implementation more restrictive and brittle than desired.
