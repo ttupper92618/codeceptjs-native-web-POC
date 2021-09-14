@@ -87,6 +87,14 @@ Once you have downloaded the JDK, you can install it on a mac by double-clicking
 
 To test iOS apps using this project, you will need to install Xcode on your mac.  You may do so through the Apple App Store.  You may skip this step if you don't wish to test iOS applications.
 
+**Note:** It is extremely important to ensure that the proper path for xcode is available to the Appium instance when it runs.  For a standard installation, you can manage this by typing the following in terminal:
+
+```
+sudo xcode-select --switch /Applications/Xcode.app
+```
+
+This will set the path to Applications.  If you install xcode in a non-standard location, you will need to adjust the above noted path as needed.
+
 ### **Install Android Studio**
 
 To test Android apps, you will need to install Android Studio.  You may do so by downloading the proper version for your machine from https://developer.android.com/studio, and then following the installation instructions available at https://developer.android.com/studio/install.
