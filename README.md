@@ -63,8 +63,10 @@ brew update
 Then type the following into terminal in order to install node:
 
 ```
-brew install node
+brew install node@14
 ```
+
+**IMPORTANT!:** You must use the LTS (long term support) version of node, which as of this writing is 14.17.6; this project ***will not work*** with later node versions.  If you have a newer version of node installed, then you must use node version manager (nvm) to install node 14 and use it.  A concise guide on how to do so may be found here: https://chamikakasun.medium.com/how-to-manage-multiple-node-versions-in-macos-2021-guide-5065f32cb63b
 
 When the process completes, you can test node and NPM by typing the following commands into terminal:
 
@@ -456,8 +458,6 @@ This POC will be extended in the following manner some time soon:
 - Better set-up and tear-down handling.
 
 ## **Known Issues**
-
-- Visual testing is disabled at the moment because of issues under some versions of node.
 
 - This project executes tests against android applications using uiautomator, the native ui automation tool provided by Google.  The appium community variant (uiautomator2) will not work with this project.
 

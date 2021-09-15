@@ -10,12 +10,12 @@ exports.config = {
     Mochawesome: {
       uniqueScreenshotNames: true
     },
-    /*ResembleHelper : {
+    ResembleHelper : {
       require: 'codeceptjs-resemblehelper',
       baseFolder: '../screenshots/base/',
       diffFolder: '../screenshots/diff/',
       prepareBaseImage: false
-    }*/
+    }
   },
   include: {
     I: '../steps_file.js'
